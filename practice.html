@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing Practice</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="py-5 bg-light">
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-9 col-lg-7">
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <h1 id="setTitle" class="h4 mb-1"></h1>
+              <p id="setNotes" class="text-muted mb-1"></p>
+              <div class="text-muted small">
+                Phrase <span id="currentIndex"></span> of <span id="totalCount"></span>
+              </div>
+            </div>
+            <a href="index.html" class="btn btn-outline-secondary btn-sm">Back</a>
+          </div>
+
+          <div id="placeholders" class="d-flex flex-wrap mb-3"></div>
+
+          <input
+            id="inputBox"
+            class="form-control form-control-lg"
+            placeholder="Start typing here..."
+            autocomplete="off"
+          />
+
+          <div class="d-flex justify-content-between mt-3">
+            <div class="btn-group">
+              <button id="prevBtn" class="btn btn-outline-secondary">Previous</button>
+              <button id="nextBtn" class="btn btn-outline-secondary">Next</button>
+            </div>
+            <div class="btn-group">
+              <button id="hintBtn" class="btn btn-outline-secondary">Hint</button>
+              <button id="repeatBtn" class="btn btn-primary">Repeat</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js?v=1.0.0"></script>
+
+</body>
+</html>

@@ -3,172 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Writing Practice App</title>
+  <title>Select Practice Set</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
-    body { background: #f6f7f9; }
-    .char {
-      width: 24px;
-      height: 35px;
-      line-height: 35px;
-      text-align: center;
-      border-bottom: 2px solid #adb5bd;
-      font-size: 20px;
-      margin-right: 4px;
-    }
-    .char.space { border-bottom: none; width: 12px; }
-    .char.correct { border-color: #198754; color: #198754; font-weight: 600; }
-    .char.hint { border-color: #0d6efd; color: #0d6efd; font-weight: 600; }
-  </style>
 </head>
-<body class="py-5">
+<body class="bg-light py-5">
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-9 col-lg-7">
+    <div class="col-md-8 col-lg-6">
       <div class="card shadow-sm">
         <div class="card-body">
-
-          <h1 id="setTitle" class="h4 mb-1"></h1>
-          <p id="setNotes" class="text-muted mb-1"></p>
-          <div class="text-muted small mb-3">
-            Phrase <span id="currentIndex"></span> of <span id="totalCount"></span>
-          </div>
-
-          <div id="placeholders" class="d-flex flex-wrap mb-3"></div>
-
-          <input id="inputBox" class="form-control form-control-lg" placeholder="Start typing here..." autocomplete="off" />
-
-          <div class="d-flex justify-content-between mt-3">
-            <div class="btn-group">
-              <button id="prevBtn" class="btn btn-outline-secondary">Previous</button>
-              <button id="nextBtn" class="btn btn-outline-secondary">Next</button>
-            </div>
-            <div class="btn-group">
-              <button id="hintBtn" class="btn btn-outline-secondary">Hint</button>
-              <button id="repeatBtn" class="btn btn-primary">Repeat Phrase</button>
-            </div>
-          </div>
-
+          <h1 class="h4 mb-3">Select Practice Set</h1>
+          <div id="datasetList" class="list-group"></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 $(function () {
+  fetch('manifest.json')
+    .then(res => res.json())
+    .then(manifest => {
+      manifest.datasets.forEach(fileName => {
+        const dataPath = `data/${fileName}`;
 
-  // JSON hardcoded as text (can later be fetched from URL)
-  const jsonText = `{
-    "title": "Test",
-    "language": "en-US",
-    "notes": "Test set",
-    "tags": ["tag1", "tag2"],
-    "data": [
-      { "text": "practice makes writing better" },
-      { "text": "more practice better result" }
-    ]
-  }`;
-
-  const setData = JSON.parse(jsonText);
-  let currentIndex = 0;
-
-  const speechConfig = {
-    lang: setData.language,
-    rate: 0.85,
-    pitch: 1.0,
-    volume: 1.0
-  };
-
-  const $placeholders = $("#placeholders");
-  const $inputBox = $("#inputBox");
-
-  function renderPhrase() {
-    const phrase = setData.data[currentIndex].text;
-
-    $("#setTitle").text(setData.title);
-    $("#setNotes").text(setData.notes);
-    $("#currentIndex").text(currentIndex + 1);
-    $("#totalCount").text(setData.data.length);
-
-    $placeholders.empty();
-    $inputBox.val("");
-
-    phrase.split("").forEach(char => {
-      const $span = $("<span>").addClass("char");
-      if (char === " ") $span.addClass("space").text(" ");
-      $placeholders.append($span);
+        fetch(dataPath)
+          .then(res => res.json())
+          .then(data => {
+            const link = `practice.html?data=${encodeURIComponent(dataPath)}`;
+            $('#datasetList').append(`
+              <a href="${link}" class="list-group-item list-group-item-action">
+                <div class="fw-semibold">${data.title}</div>
+                <div class="text-muted small">${data.notes || ''}</div>
+              </a>
+            `);
+          });
+      });
+    })
+    .catch(() => {
+      $('#datasetList').html('<div class="text-danger">Failed to load manifest.</div>');
     });
-
-    speakPhrase(phrase);
-  }
-
-  function speakPhrase(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = speechConfig.lang;
-    utterance.rate = speechConfig.rate;
-    utterance.pitch = speechConfig.pitch;
-    utterance.volume = speechConfig.volume;
-
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  }
-
-  $inputBox.on("input", function () {
-    const phrase = setData.data[currentIndex].text;
-    const value = $(this).val();
-
-    $placeholders.children().each(function (i) {
-      const $el = $(this);
-      $el.removeClass("correct hint").text(phrase[i] === " " ? " " : "");
-
-      if (value[i] && value[i].toLowerCase() === phrase[i].toLowerCase()) {
-        $el.text(phrase[i]).addClass("correct");
-      }
-    });
-  });
-
-  $("#hintBtn").on("click", function () {
-    const phrase = setData.data[currentIndex].text;
-    const value = $inputBox.val();
-
-    $placeholders.children().each(function (i) {
-      if (phrase[i] === " ") return;
-      if (!value[i] || value[i].toLowerCase() !== phrase[i].toLowerCase()) {
-        $(this).text(phrase[i]).addClass("hint");
-        return false;
-      }
-    });
-  });
-
-  $("#repeatBtn").on("click", function () {
-    speakPhrase(setData.data[currentIndex].text);
-  });
-
-  $("#nextBtn").on("click", function () {
-    if (currentIndex < setData.data.length - 1) {
-      currentIndex++;
-      renderPhrase();
-    }
-  });
-
-  $("#prevBtn").on("click", function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-      renderPhrase();
-    }
-  });
-
-  // Initial load
-  renderPhrase();
 });
 </script>
 

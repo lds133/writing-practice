@@ -1,0 +1,11 @@
+{
+  "title": "Beginner Practice",
+  "language": "en-US",
+  "notes": "Easy phrases for warm-up",
+  "tags": ["beginner", "easy"],
+  "data": [
+    { "text": "writing takes patience" },
+    { "text": "slow and steady progress" },
+    { "text": "practice every single day" }
+  ]
+}
