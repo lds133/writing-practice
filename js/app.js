@@ -42,17 +42,31 @@ $(function () {
       window.location.href = "index.html";
     });
 
+	
+	function cleanString(input) {
+	  return input.replace(/[^a-zA-Z]/g, ' ').replace(/\s+/g, ' ').trim();
+	}
+
   function init() {
     $("#totalCount").text(setData.data.length);
     renderPhrase();
   }
 
   function renderPhrase() {
-    const phrase = setData.data[currentIndex].text;
+    const phrase = cleanString( setData.data[currentIndex].text );
 
     $("#setTitle").text(setData.title);
     $("#setNotes").text(setData.notes);
     $("#currentIndex").text(currentIndex + 1);
+	$("#setPhraseNotes").text(setData.data[currentIndex].notes || "");
+
+	// Render tags
+	const $tags = $("#setTags");
+	$tags.empty();
+	(setData.tags || []).forEach(tag => {
+	  $tags.append(`<span class="badge bg-secondary me-1">${tag}</span>`);
+	});
+
 
     $placeholders.empty();
     $inputBox.val("");
@@ -64,7 +78,7 @@ $(function () {
       $placeholders.append($span);
     });
 
-    speakPhrase(phrase);
+    speakPhrase(setData.data[currentIndex].text);
   }
 
   function speakPhrase(text) {
@@ -85,7 +99,7 @@ $(function () {
 
   // Typing handler
   $inputBox.on("input", function () {
-    const phrase = setData.data[currentIndex].text;
+    const phrase = cleanString( setData.data[currentIndex].text );
     const value = $(this).val();
 
     // Detect backspace

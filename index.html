@@ -30,7 +30,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 $(function () {
-  const PAGE_SIZE = 10;
+  const PAGE_SIZE = 5;
   let datasets = [];
   let currentPage = 1;
 
@@ -62,7 +62,10 @@ $(function () {
           $('#datasetList').append(`
             <a href="${link}" class="list-group-item list-group-item-action">
               <div class="fw-semibold">${data.title}</div>
-              <div class="text-muted small">${data.notes || ''}</div>
+              <div class="text-muted small mb-1">${data.notes || ''}</div>
+              <div class="mt-1">
+                ${(data.tags || []).map(tag => `<span class=\"badge bg-secondary me-1\">${tag}</span>`).join('')}
+              </div>
             </a>
           `);
         });

@@ -1,7 +1,7 @@
 {
-  "title": "Opis ilustracji B1",
+  "title": "Opis ilustracji",
   "language": "pl-PL",
-  "notes": "Page 5",
+  "notes": "6_B1_M.pdf page 5",
   "link":"https://certyfikatpolski.pl/wp-content/uploads/2017/03/6_B1_M.pdf",
   "tags": ["B1", "opis","mówienie"],
   "data": [
@@ -22,7 +22,6 @@
 	{ "text": "Podłoga jest drewniana." },
 	{ "text": "Kominek z czerwonej i białej cegły zajmuje najwięcej miejsca na zdjęciu i jednocześnie najbardziej skupia uwagę domowników. " },
 	{ "text": "W głębi, z lewej strony kominka, znajduje się kilka zielonych roślin, które widać wyraźnie na tle białych ścian." },
-	{ "text": "Rodzina jest spokojna i szczęśliwa, a atmosfera na zdjęciu jest pełna pozytywnych emocji: poczucia bezpieczeństwa, harmonii oraz miłości rodziców do dzieci." },
-	{ "text": "" }	
+	{ "text": "Rodzina jest spokojna i szczęśliwa, a atmosfera na zdjęciu jest pełna pozytywnych emocji: poczucia bezpieczeństwa, harmonii oraz miłości rodziców do dzieci." }
   ]
 }
