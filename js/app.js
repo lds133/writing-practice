@@ -44,7 +44,7 @@ $(function () {
 
 	
 	function cleanString(input) {
-	  return input.replace(/[^a-zA-Z]/g, ' ').replace(/\s+/g, ' ').trim();
+	  return input.replace(/[^\p{L}]+/gu, ' ').replace(/\s+/g, ' ').trim();
 	}
 
   function init() {
