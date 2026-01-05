@@ -147,7 +147,7 @@ $(function () {
 
   // Hint
   $("#hintBtn").on("click", function () {
-    const phrase = setData.data[currentIndex].text;
+    const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
 
     $placeholders.children().each(function (i) {
