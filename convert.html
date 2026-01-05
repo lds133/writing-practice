@@ -64,7 +64,7 @@ $(function () {
 
     const sentences = text
       .split('.')
-      .map(s => s.trim())
+      .map(s => s.replace(/(\r\n|\n|\r)/gm, "").trim()+".")
       .filter(s => s.length > 0);
 
     const json = JSON.parse(JSON.stringify(TEMPLATE));
