@@ -2,6 +2,7 @@
   "datasets": [
     "test01.json",
     "text01.json",
+    "text02.json",	
     "image01.json"
   ]
 }

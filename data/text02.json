@@ -1,0 +1,37 @@
+{
+  "title": "Polish text example 2",
+  "language": "pl-PL",
+  "notes": "Po polsku bez błędu",
+  "tags": [
+    "A2"
+  ],
+ "data": [
+    {
+      "text": "Zdrowy styl życia to przede wszystkim odpowiednia dieta."
+    },
+    {
+      "text": "Muszą się w niej znaleźć węglowodany, tłuszcze, białka, witaminy, składniki mineralne."
+    },
+    {
+      "text": "Nie można bać się tłuszczy, gdyżtakże one są potrzebne organizmowi."
+    },
+    {
+      "text": "Zdrowe tłuszcze to różnego rodzaju oleje, a takżeorzechy i ryby."
+    },
+    {
+      "text": "Chcesz czasem wyrzucić czapki, szale i parasole? Możesz, ale musisz zbudować swoją odporność."
+    },
+    {
+      "text": "Możesz to zrobić, dając swojemu ciału i psychice aktywność oraz wypoczynek."
+    },
+    {
+      "text": "Treningi, ćwiczenia, nauka? Tak, ale po nich musi nastąpić relaks."
+    },
+    {
+      "text": "Jeśli wierzyszróżnym dietetycznym nowikom i modom, możesz je wypróbować, ale z umiarem! Drastyczne diety nie przysłużą się twojemu zdrowiu, a niektórymi możesz sobie zaszkodzić."
+    },
+    {
+      "text": "Twarde materace, joga, wegetarianizm? Dlaczego nie! A może wypróbujesz jeszcze inne opcje?."
+    }
+  ]
+}
