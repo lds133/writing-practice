@@ -92,6 +92,27 @@ Sound files are optional but recommended.
 
 All sounds should be **short WAV files** for best responsiveness.
 
+
+
+## convert.html – Text to Dataset Converter
+
+The project includes a utility page convert.html that helps you quickly create dataset JSON files from plain text.
+
+### Purpose
+
+- Convert raw text into a valid practice dataset
+- Speed up creation of new data/*.json files
+- Ensure correct JSON structure for the app
+
+### How it works
+
+The page is split into two panels:
+Left panel: input text area (type or paste text)
+Right panel: generated JSON output (read-only)
+Text is split into sentences using a dot (.) as the delimiter
+Each sentence becomes one phrase entry in the dataset
+
+
 ---
 
 

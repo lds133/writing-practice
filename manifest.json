@@ -1,11 +1,7 @@
 {
   "datasets": [
     "test01.json",
-    "test02.json",
-    "test03.json",
-	"test04.json",
-    "test05.json",
-    "test06.json",	
+    "text01.json",
     "image01.json"
   ]
 }

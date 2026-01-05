@@ -134,15 +134,12 @@ $(function () {
     });
 
 
-	console.log(">>>",value.length,phrase.length,"'"+value+"'","'"+phrase+"'",  value.length === phrase.length, value.toLowerCase() === phrase.toLowerCase(),value.toLowerCase() == phrase.toLowerCase() );
-
     // Success check
     if (
       value.length === phrase.length &&
       value.toLowerCase() === phrase.toLowerCase()
     ) {
       playSound(sounds.success);
-	  
     }
 
     lastValue = value;
