@@ -11,6 +11,7 @@ $(function () {
 
   let setData = null;
   let currentIndex = 0;
+  let phraseCompleted = false;
 
   const $placeholders = $("#placeholders");
   const $inputBox = $("#inputBox");
@@ -54,7 +55,9 @@ $(function () {
 
   function renderPhrase() {
     const phrase = cleanString( setData.data[currentIndex].text );
-
+	
+	phraseCompleted = false;
+	
     $("#setTitle").text(setData.title);
     $("#setNotes").text(setData.notes);
     $("#currentIndex").text(currentIndex + 1);
@@ -97,8 +100,16 @@ $(function () {
     sound.play();
   }
 
+	$inputBox.on('keydown', function (e) {
+		if (e.key === 'Enter' && phraseCompleted) {
+			e.preventDefault();
+			gotoNextPhrase();
+			}
+		});
+
+
   // Typing handler
-  $inputBox.on("input", function () {
+  $inputBox.on("input", function (e) {
     const phrase = cleanString( setData.data[currentIndex].text );
     const value = $(this).val();
 
@@ -140,6 +151,7 @@ $(function () {
       value.toLowerCase() === phrase.toLowerCase()
     ) {
       playSound(sounds.success);
+	  phraseCompleted = true;
     }
 
     lastValue = value;
@@ -164,18 +176,25 @@ $(function () {
     speakPhrase(setData.data[currentIndex].text);
   });
 
-  // Navigation
-  $("#nextBtn").on("click", function () {
+  function gotoNextPhrase()
+  {
     if (currentIndex < setData.data.length - 1) {
-      currentIndex++;
+  	  currentIndex++;
       renderPhrase();
     }
-  });
+  }
 
-  $("#prevBtn").on("click", function () {
+  function gotoPervPhrase()
+  {
     if (currentIndex > 0) {
       currentIndex--;
       renderPhrase();
     }
-  });
+  }
+
+
+
+  // Navigation
+  $("#nextBtn").on("click", gotoNextPhrase );
+  $("#prevBtn").on("click", gotoPervPhrase );
 });
