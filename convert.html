@@ -59,12 +59,16 @@ $(function () {
     data: []
   };
 
+function splitBySentenceEnd(str) {
+  return str.replace(/(\r\n|\n|\r)/gm, "").match(/[^.!?]+[.!?]*/g) || [];
+}
+
+
   $('#inputText').on('input', function () {
     const text = $(this).val();
 
-    const sentences = text
-      .split('.')
-      .map(s => s.replace(/(\r\n|\n|\r)/gm, "").trim()+".")
+    const sentences = splitBySentenceEnd(text)
+      .map(s => s.trim())
       .filter(s => s.length > 0);
 
     const json = JSON.parse(JSON.stringify(TEMPLATE));
