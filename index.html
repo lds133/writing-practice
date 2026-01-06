@@ -14,7 +14,8 @@
     <div class="col-md-8 col-lg-6">
       <div class="card shadow-sm">
         <div class="card-body">
-          <h1 class="h4 mb-3">Select Practice Set</h1>
+          <h1 id="datasetTitle" class="h4 mb-3">Select Practice Set</h1>
+		  <p id="datasetNotes" class="h6 mb-3"></p>
 
           <div id="datasetList" class="list-group mb-3"></div>
 
@@ -33,11 +34,16 @@ $(function () {
   const PAGE_SIZE = 10;
   let datasets = [];
   let currentPage = 1;
+  
+  let manifestFileName = 'manifest.json';
+  
 
-  fetch('manifest.json')
+  fetch(manifestFileName)
     .then(res => res.json())
     .then(manifest => {
       datasets = manifest.datasets || [];
+      $('#datasetTitle').text( manifest.title || "Select Practice Set" );
+	  $('#datasetNotes').text( manifest.notes || "" );	  
       renderPage(1);
       renderPagination();
     })

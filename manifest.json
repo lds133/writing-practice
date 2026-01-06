@@ -1,4 +1,7 @@
 {
+  "title": "Select Practice Set",
+  "notes": "",  
+	
   "datasets": [
     "letter01.json",
 	"letter02.json",

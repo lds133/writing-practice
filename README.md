@@ -38,6 +38,8 @@ The manifest file lives in the **project root** and lists available dataset file
 ### Example
 ```json
 {
+  "title": "Select Practice Set",
+  "notes": "Some notes",  
   "datasets": [
     "test1.json",
     "test2.json"
@@ -48,7 +50,6 @@ The manifest file lives in the **project root** and lists available dataset file
 ### Notes
 - Filenames are assumed to be located in the `/data` folder
 - Order in the array defines display order
-- No metadata duplication — all details come from the dataset files themselves
 
 
 ## Dataset JSON Format (`data/*.json`)
