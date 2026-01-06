@@ -99,6 +99,8 @@ All sounds should be **short WAV files** for best responsiveness.
 
 The project includes a utility page convert.html that helps you quickly create dataset JSON files from plain text.
 
+https://lds133.github.io/writing-practice/convert.html
+
 ### Purpose
 
 - Convert raw text into a valid practice dataset
@@ -111,7 +113,7 @@ The page is split into two panels:
 Left panel: input text area (type or paste text)
 Right panel: generated JSON output (read-only)
 Text is split into sentences using a dot (.) as the delimiter
-Each sentence becomes one phrase entry in the dataset
+Each sentence becomes one phrase entry in the dataset.
 
 
 ---
