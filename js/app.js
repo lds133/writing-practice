@@ -25,10 +25,10 @@ $(function () {
     success: new Audio("sounds/type_success.wav")
   };
   
-  sounds.ok.volume = 0.5;      
+  sounds.ok.volume = 0.25;      
   sounds.error.volume = 1.0;
-  sounds.space.volume = 0.5;
-  sounds.backspace.volume = 0.5;
+  sounds.space.volume = 0.25;
+  sounds.backspace.volume = 0.25;
   sounds.success.volume = 1.0;  
 
   let lastValue = "";
@@ -51,7 +51,7 @@ $(function () {
 
 	
 	function cleanString(input) {
-	  return input.replace(/[^\p{L}]+/gu, ' ').replace(/\s+/g, ' ').trim();
+	  return input.replace(/[^\p{L}^\d]+/gu, ' ').replace(/\s+/g, ' ').trim();
 	}
 
   function init() {
@@ -107,10 +107,20 @@ $(function () {
   }
 
 	$inputBox.on('keydown', function (e) {
+
 		if (e.key === 'Enter' && phraseCompleted) {
 			e.preventDefault();
 			gotoNextPhrase();
 			}
+		if (e.key === 'F1' ) {
+			e.preventDefault();
+			makeHint();
+			}
+		if (e.key === 'F2' ) {
+			e.preventDefault();
+			sayPharase();
+			}
+			
 		});
 
 
@@ -150,11 +160,11 @@ $(function () {
       }
     });
 
-
+	let fixedvalue = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ");
     // Success check
     if (
       value.length === phrase.length &&
-      value.toLowerCase() === phrase.toLowerCase()
+      fixedvalue.toLowerCase() === phrase.toLowerCase()
     ) {
       playSound(sounds.success);
 	  phraseCompleted = true;
@@ -163,8 +173,12 @@ $(function () {
     lastValue = value;
   });
 
-  // Hint
-  $("#hintBtn").on("click", function () {
+
+
+
+
+
+  function makeHint() {
     const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
 
@@ -174,13 +188,9 @@ $(function () {
         $(this).text(phrase[i]).addClass("hint");
         return false;
       }
-    });
-  });
+    });  
+  }
 
-  // Repeat
-  $("#repeatBtn").on("click", function () {
-    speakPhrase(setData.data[currentIndex].text);
-  });
 
   function gotoNextPhrase()
   {
@@ -199,8 +209,16 @@ $(function () {
   }
 
 
+  function sayPharase()
+  {
+	  speakPhrase(setData.data[currentIndex].text);
+  }
 
-  // Navigation
+  
   $("#nextBtn").on("click", gotoNextPhrase );
   $("#prevBtn").on("click", gotoPervPhrase );
+  $("#hintBtn").on("click", makeHint );
+  $("#repeatBtn").on("click", sayPharase );
+  
+  
 });

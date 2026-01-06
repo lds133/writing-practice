@@ -6,6 +6,13 @@ A lightweight, browser‑based web application to improve writing skills through
 
 The app speaks short phrases aloud, displays letter placeholders, and provides instant visual and audio feedback as the user types. It is designed to be **fully static**, making it ideal for **GitHub Pages hosting**.
 
+### Hotkeys in the Edit Box
+- **F1** — Show hint
+- **F2** — Repeat the pharase
+- **Enter** — Move to the next phrase once the current phrase is completed successfully
+
+
+
 https://lds133.github.io/writing-practice/
 
 ## Features
