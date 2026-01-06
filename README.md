@@ -1,5 +1,7 @@
 # Writing Practice Web App
 
+![logo](quill100.png)
+
 A lightweight, browser‑based web application to improve writing skills through **listening and typing practice**.
 
 The app speaks short phrases aloud, displays letter placeholders, and provides instant visual and audio feedback as the user types. It is designed to be **fully static**, making it ideal for **GitHub Pages hosting**.
