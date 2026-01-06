@@ -1,7 +1,7 @@
 $(function () {
   // Read JSON URL from query string
   const params = new URLSearchParams(window.location.search);
-  const dataUrl = params.get("data");
+  const dataUrl = "data/"+params.get("data");
 
   if (!dataUrl) {
     alert("No data file specified.");
@@ -24,6 +24,12 @@ $(function () {
     backspace: new Audio("sounds/type_bs.wav"),
     success: new Audio("sounds/type_success.wav")
   };
+  
+  sounds.ok.volume = 0.5;      
+  sounds.error.volume = 1.0;
+  sounds.space.volume = 0.5;
+  sounds.backspace.volume = 0.5;
+  sounds.success.volume = 1.0;  
 
   let lastValue = "";
 
