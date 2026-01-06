@@ -1,9 +1,19 @@
 # Writing Practice Web App
 
+![logo](quill100.png)
+
 A lightweight, browser‑based web application to improve writing skills through **listening and typing practice**.
 
 The app speaks short phrases aloud, displays letter placeholders, and provides instant visual and audio feedback as the user types. It is designed to be **fully static**, making it ideal for **GitHub Pages hosting**.
 
+### Hotkeys in the Edit Box
+- **F1** — Show hint
+- **F2** — Repeat the pharase
+- **Enter** — Move to the next phrase once the current phrase is completed successfully
+
+
+
+https://lds133.github.io/writing-practice/
 
 ## Features
 
@@ -98,6 +108,8 @@ All sounds should be **short WAV files** for best responsiveness.
 
 The project includes a utility page convert.html that helps you quickly create dataset JSON files from plain text.
 
+https://lds133.github.io/writing-practice/convert.html
+
 ### Purpose
 
 - Convert raw text into a valid practice dataset
@@ -110,7 +122,7 @@ The page is split into two panels:
 Left panel: input text area (type or paste text)
 Right panel: generated JSON output (read-only)
 Text is split into sentences using a dot (.) as the delimiter
-Each sentence becomes one phrase entry in the dataset
+Each sentence becomes one phrase entry in the dataset.
 
 
 ---

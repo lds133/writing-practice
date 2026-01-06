@@ -1,7 +1,7 @@
 $(function () {
   // Read JSON URL from query string
   const params = new URLSearchParams(window.location.search);
-  const dataUrl = params.get("data");
+  const dataUrl = "data/"+params.get("data");
 
   if (!dataUrl) {
     alert("No data file specified.");
@@ -11,6 +11,7 @@ $(function () {
 
   let setData = null;
   let currentIndex = 0;
+  let phraseCompleted = false;
 
   const $placeholders = $("#placeholders");
   const $inputBox = $("#inputBox");
@@ -23,6 +24,12 @@ $(function () {
     backspace: new Audio("sounds/type_bs.wav"),
     success: new Audio("sounds/type_success.wav")
   };
+  
+  sounds.ok.volume = 0.25;      
+  sounds.error.volume = 1.0;
+  sounds.space.volume = 0.25;
+  sounds.backspace.volume = 0.25;
+  sounds.success.volume = 1.0;  
 
   let lastValue = "";
 
@@ -44,7 +51,7 @@ $(function () {
 
 	
 	function cleanString(input) {
-	  return input.replace(/[^\p{L}]+/gu, ' ').replace(/\s+/g, ' ').trim();
+	  return input.replace(/[^\p{L}^\d]+/gu, ' ').replace(/\s+/g, ' ').trim();
 	}
 
   function init() {
@@ -54,7 +61,9 @@ $(function () {
 
   function renderPhrase() {
     const phrase = cleanString( setData.data[currentIndex].text );
-
+	
+	phraseCompleted = false;
+	
     $("#setTitle").text(setData.title);
     $("#setNotes").text(setData.notes);
     $("#currentIndex").text(currentIndex + 1);
@@ -97,8 +106,26 @@ $(function () {
     sound.play();
   }
 
+	$inputBox.on('keydown', function (e) {
+
+		if (e.key === 'Enter' && phraseCompleted) {
+			e.preventDefault();
+			gotoNextPhrase();
+			}
+		if (e.key === 'F1' ) {
+			e.preventDefault();
+			makeHint();
+			}
+		if (e.key === 'F2' ) {
+			e.preventDefault();
+			sayPharase();
+			}
+			
+		});
+
+
   // Typing handler
-  $inputBox.on("input", function () {
+  $inputBox.on("input", function (e) {
     const phrase = cleanString( setData.data[currentIndex].text );
     const value = $(this).val();
 
@@ -133,21 +160,26 @@ $(function () {
       }
     });
 
-
+	let fixedvalue = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ");
     // Success check
     if (
       value.length === phrase.length &&
-      value.toLowerCase() === phrase.toLowerCase()
+      fixedvalue.toLowerCase() === phrase.toLowerCase()
     ) {
       playSound(sounds.success);
+	  phraseCompleted = true;
     }
 
     lastValue = value;
   });
 
-  // Hint
-  $("#hintBtn").on("click", function () {
-    const phrase = setData.data[currentIndex].text;
+
+
+
+
+
+  function makeHint() {
+    const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
 
     $placeholders.children().each(function (i) {
@@ -156,26 +188,37 @@ $(function () {
         $(this).text(phrase[i]).addClass("hint");
         return false;
       }
-    });
-  });
+    });  
+  }
 
-  // Repeat
-  $("#repeatBtn").on("click", function () {
-    speakPhrase(setData.data[currentIndex].text);
-  });
 
-  // Navigation
-  $("#nextBtn").on("click", function () {
+  function gotoNextPhrase()
+  {
     if (currentIndex < setData.data.length - 1) {
-      currentIndex++;
+  	  currentIndex++;
       renderPhrase();
     }
-  });
+  }
 
-  $("#prevBtn").on("click", function () {
+  function gotoPervPhrase()
+  {
     if (currentIndex > 0) {
       currentIndex--;
       renderPhrase();
     }
-  });
+  }
+
+
+  function sayPharase()
+  {
+	  speakPhrase(setData.data[currentIndex].text);
+  }
+
+  
+  $("#nextBtn").on("click", gotoNextPhrase );
+  $("#prevBtn").on("click", gotoPervPhrase );
+  $("#hintBtn").on("click", makeHint );
+  $("#repeatBtn").on("click", sayPharase );
+  
+  
 });

@@ -1,0 +1,28 @@
+{
+  "title": "Pisanie 3",
+  "language": "pl-PL",
+  "notes": "Spędził Pan wakacje w małym hotelu nad morzem. Proszę napisać opinię o tym miejscu",
+  "tags": [
+    "ChatGPT", "B1", "unverified"
+  ],
+  "data": [
+    {
+      "text": "Spędziłem tydzień w hotelu Błękitna Fala w Ustce."
+    },
+    {
+      "text": "Mały, czysty, bardzo blisko plaży."
+    },
+    {
+      "text": "Miła obsługa, smaczne śniadania, spokojna okolica."
+    },
+    {
+      "text": "Idealne miejsce na relaksujący urlop nad morzem."
+    },
+    {
+      "text": "Zdecydowanie polecam parom i rodzinom."
+    },
+    {
+      "text": "Ceny przystępne, pokoje dobrze wyposażone, właściciele pomocni i uprzejmi."
+    }
+  ]
+}

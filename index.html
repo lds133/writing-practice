@@ -30,7 +30,7 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
 $(function () {
-  const PAGE_SIZE = 5;
+  const PAGE_SIZE = 10;
   let datasets = [];
   let currentPage = 1;
 
@@ -45,31 +45,36 @@ $(function () {
       $('#datasetList').html('<div class="text-danger">Failed to load manifest.</div>');
     });
 
-  function renderPage(page) {
+
+  function renderDataset(filename,dataset)
+  {
+      const link = `practice.html?data=${encodeURIComponent(filename)}`;
+	  $('#datasetList').append(`
+		<a href="${link}" class="list-group-item list-group-item-action">
+		  <div class="fw-semibold">${dataset.title}</div>
+		  <div class="text-muted small mb-1">${dataset.notes || ''}</div>
+		  <div class="mt-1">
+			${(dataset.tags || []).map(tag => `<span class=\"badge bg-secondary me-1\">${tag}</span>`).join('')}
+		  </div>
+		</a>
+	  `);
+  }
+
+
+
+
+  async function renderPage(page) {
     currentPage = page;
     $('#datasetList').empty();
 
     const start = (page - 1) * PAGE_SIZE;
     const end = Math.min(start + PAGE_SIZE, datasets.length);
-
-    datasets.slice(start, end).forEach(fileName => {
-      const dataPath = `data/${fileName}`;
-
-      fetch(dataPath)
-        .then(res => res.json())
-        .then(data => {
-          const link = `practice.html?data=${encodeURIComponent(dataPath)}`;
-          $('#datasetList').append(`
-            <a href="${link}" class="list-group-item list-group-item-action">
-              <div class="fw-semibold">${data.title}</div>
-              <div class="text-muted small mb-1">${data.notes || ''}</div>
-              <div class="mt-1">
-                ${(data.tags || []).map(tag => `<span class=\"badge bg-secondary me-1\">${tag}</span>`).join('')}
-              </div>
-            </a>
-          `);
-        });
-    });
+	
+	for (const filename of datasets.slice(start, end)) {
+		const dataset = await fetch(`data/${filename}`).then(r => r.json());	
+		renderDataset(filename,dataset);
+		
+	}
 
     updatePagination();
   }
