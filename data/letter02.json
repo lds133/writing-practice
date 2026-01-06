@@ -1,0 +1,22 @@
+{
+  "title": "Zaproszenie 2",
+  "language": "pl-PL",
+  "notes": "Proszę napisać zaproszenie dla nauczyciela lub szefa na swoje urodziny, które organizuje Pan w restauracji.",
+  "tags": [
+    "ChatGPT", "B1", "unverified"
+  ],
+  "data": [
+    {
+      "text": "Szanowny Panie Dyrektorze,"
+    },
+    {
+      "text": "zapraszam serdecznie na moje urodziny 15 marca o 18:30"
+    },
+    {
+      "text": "w restauracji Magnolia, Warszawa"
+    },	
+    {
+      "text": "Będzie mi bardzo miło"
+    }
+  ]
+}
