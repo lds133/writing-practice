@@ -1,5 +1,20 @@
 {
+  "title": "Select Practice Set",
+  "notes": "",  
+	
   "datasets": [
+    "dyktanda01.json",
+	"dyktanda02.json",
+	"dyktanda03.json",
+	
+	"dyktanda11.json",
+	"dyktanda12.json",
+	"dyktanda13.json",
+	"dyktanda14.json",		
+	"dyktanda15.json",
+	"dyktanda16.json",
+	"dyktanda17.json",
+	
     "letter01.json",
 	"letter02.json",
 	"feedback01.json",

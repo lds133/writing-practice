@@ -1,0 +1,22 @@
+{
+  "title": "Dyktanda",
+  "language": "pl-PL",
+  "notes": "Pracowita myszka",
+  "tags": [
+    "dyktanda", "klasa2"
+  ],
+  "data": [
+    {
+      "text": "Myszka Misia wiele dni biegała po polu."
+    },
+    {
+      "text": "Zbierała ziarenka."
+    },
+    {
+      "text": "Zgromadziła zapasy na zimę."
+    },
+    {
+      "text": "Wiosną zbuduje gniazdo dla swoich dzieci."
+    }
+  ]
+}

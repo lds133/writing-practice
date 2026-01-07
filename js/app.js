@@ -196,16 +196,21 @@ $(function () {
   {
     if (currentIndex < setData.data.length - 1) {
   	  currentIndex++;
-      renderPhrase();
-    }
+    } else	{
+      currentIndex=0;
+	}
+    renderPhrase();	
+	
   }
 
   function gotoPervPhrase()
   {
     if (currentIndex > 0) {
       currentIndex--;
-      renderPhrase();
-    }
+    } else {
+	  currentIndex=currentIndex;
+	}
+    renderPhrase();	
   }
 
 

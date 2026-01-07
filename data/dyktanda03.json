@@ -1,0 +1,22 @@
+{
+  "title": "Dyktanda",
+  "language": "pl-PL",
+  "notes": "List z wakacji",
+  "tags": [
+    "dyktanda", "klasa2"
+  ],
+  "data": [
+    {
+      "text": "Wczoraj byłam na spacerze nad morzem."
+    },
+    {
+      "text": "Widziałam statek."
+    },
+    {
+      "text": "Na pokładzie pracowali marynarze."
+    },
+    {
+      "text": "Flagi powiewały na wietrze."
+    }
+  ]
+}
