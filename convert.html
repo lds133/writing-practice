@@ -60,7 +60,7 @@ $(function () {
   };
 
 function splitBySentenceEnd(str) {
-  return str.replace(/(\r\n|\n|\r)/gm, "").match(/[^.!?]+[.!?]*/g) || [];
+  return str.replace(/(\r\n|\n|\r)/gm, " ").replace(/\s+/g, " ").match(/[^.!?]+[.!?]*/g) || [];
 }
 
 
