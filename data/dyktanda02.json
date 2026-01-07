@@ -1,0 +1,28 @@
+{
+  "title": "Dyktanda",
+  "language": "pl-PL",
+  "notes": "W lesie",
+  "tags": [
+    "dyktanda", "klasa2"
+  ],
+  "data": [
+    {
+      "text": "Nadchodzi wiosna."
+    },
+    {
+      "text": "Robi się ciepło."
+    },
+    {
+      "text": "Trawa się zieleni."
+    },
+    {
+      "text": "Kwitną zioła."
+    },
+    {
+      "text": "Sikory budują gniazda."
+    },
+    {
+      "text": "Na polanie pojawiają się dziki i jelenie."
+    }
+  ]
+}
