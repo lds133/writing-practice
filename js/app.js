@@ -12,6 +12,7 @@ $(function () {
   let setData = null;
   let currentIndex = 0;
   let phraseCompleted = false;
+  var stats = new Stats();	
 
   const $placeholders = $("#placeholders");
   const $inputBox = $("#inputBox");
@@ -33,6 +34,10 @@ $(function () {
 
   let lastValue = "";
 
+  
+  
+  
+
   // Load JSON
   fetch(dataUrl)
     .then(res => {
@@ -43,6 +48,7 @@ $(function () {
       setData = json;
       init();
     })
+
     .catch(err => {
       alert("Error loading data file.");
       console.error(err);
@@ -87,7 +93,8 @@ $(function () {
       $placeholders.append($span);
     });
 
-    speakPhrase(setData.data[currentIndex].text);
+	sayPharase();
+    
   }
 
   function speakPhrase(text) {
@@ -144,9 +151,14 @@ $(function () {
         playSound(sounds.space);
       } else if (typedChar.toLowerCase() === expectedChar?.toLowerCase()) {
         playSound(sounds.ok);
+		stats.event_ok();
       } else {
         playSound(sounds.error);
+		stats.event_error();
       }
+	  
+	  $("#statPlace").html(stats.get_result());
+	  
     }
 
     // Update placeholders
@@ -181,6 +193,8 @@ $(function () {
   function makeHint() {
     const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
+
+	stats.event_hint();
 
     $placeholders.children().each(function (i) {
       if (phrase[i] === " ") return;
