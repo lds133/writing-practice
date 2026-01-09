@@ -14,7 +14,14 @@
 	"dyktanda15.json",
 	"dyktanda16.json",
 	"dyktanda17.json",
-	
+
+    "czasownik01.json",
+	"czasownik02.json",
+	"czasownik03.json",
+	"czasownik04.json",
+	"czasownik05.json",
+	  
+	  
     "letter01.json",
 	"letter02.json",
 	"feedback01.json",
@@ -24,4 +31,5 @@
 	"text03.json",	
     "image01.json"
   ]
+
 }
