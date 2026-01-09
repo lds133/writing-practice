@@ -25,10 +25,10 @@ $(function () {
     success: new Audio("sounds/type_success.wav")
   };
   
-  sounds.ok.volume = 0.25;      
+  sounds.ok.volume = 0.1;      
   sounds.error.volume = 1.0;
-  sounds.space.volume = 0.25;
-  sounds.backspace.volume = 0.25;
+  sounds.space.volume = 0.1;
+  sounds.backspace.volume = 0.1;
   sounds.success.volume = 1.0;  
 
   let lastValue = "";

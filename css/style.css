@@ -13,10 +13,13 @@ body {
   margin-right: 4px;
 }
 
+/* uncomment for spaces*/
+/*
 .char.space {
   border-bottom: none;
   width: 12px;
 }
+*/
 
 .char.correct {
   border-color: #198754; /* Bootstrap success */
