@@ -35,8 +35,10 @@ $(function () {
   let lastValue = "";
 
   
-  
-  
+  new bootstrap.Tooltip($('#statPlace1')[0], { title: 'Good clicks',  placement: 'left' });
+  new bootstrap.Tooltip($('#statPlace2')[0], { title: 'Bad clicks',   placement: 'left'  });
+  new bootstrap.Tooltip($('#statPlace3')[0], { title: 'Accuracy',  	placement: 'left'  });
+	
 
   // Load JSON
   fetch(dataUrl)
@@ -157,7 +159,9 @@ $(function () {
 		stats.event_error();
       }
 	  
-	  $("#statPlace").html(stats.get_result());
+	  $("#statPlace1").html(stats.ok.toString());
+	  $("#statPlace2").html(stats.count_mistakes().toString());
+	  $("#statPlace3").html(stats.persent_accuracy().toString()+"%");
 	  
     }
 
