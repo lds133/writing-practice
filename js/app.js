@@ -34,9 +34,12 @@ $(function () {
 
   let lastValue = "";
 
+
   
-  
-  
+  new bootstrap.Tooltip($('#statPlace1')[0], { title: 'Good clicks',  placement: 'left' });
+  new bootstrap.Tooltip($('#statPlace2')[0], { title: 'Bad clicks',   placement: 'left'  });
+  new bootstrap.Tooltip($('#statPlace3')[0], { title: 'Accuracy',  	placement: 'left'  });
+	
 
   // Load JSON
   fetch(dataUrl)
@@ -134,7 +137,10 @@ $(function () {
   // Typing handler
   $inputBox.on("input", function (e) {
     const phrase = cleanString( setData.data[currentIndex].text );
-    const value = $(this).val();
+    var value = $(this).val();
+	
+	// remove punctuation and multiple spaces
+	value = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ").replace(/\s+/g, ' ');
 
     // Detect backspace
     if (value.length < lastValue.length) {
@@ -157,7 +163,9 @@ $(function () {
 		stats.event_error();
       }
 	  
-	  $("#statPlace").html(stats.get_result());
+	  $("#statPlace1").html(stats.ok.toString());
+	  $("#statPlace2").html(stats.count_mistakes().toString());
+	  $("#statPlace3").html(stats.persent_accuracy().toString()+"%");
 	  
     }
 
@@ -172,7 +180,8 @@ $(function () {
       }
     });
 
-	let fixedvalue = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ");
+	let fixedvalue = value;
+	
     // Success check
     if (
       value.length === phrase.length &&
@@ -194,6 +203,8 @@ $(function () {
     const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
 
+	$('#inputBox').focus();
+
 	stats.event_hint();
 
     $placeholders.children().each(function (i) {
@@ -203,6 +214,8 @@ $(function () {
         return false;
       }
     });  
+	
+
   }
 
 
@@ -215,6 +228,8 @@ $(function () {
 	}
     renderPhrase();	
 	
+	$('#inputBox').focus();
+	
   }
 
   function gotoPervPhrase()
@@ -225,12 +240,15 @@ $(function () {
 	  currentIndex=currentIndex;
 	}
     renderPhrase();	
+	$('#inputBox').focus();
   }
 
 
   function sayPharase()
   {
 	  speakPhrase(setData.data[currentIndex].text);
+	  
+	  $('#inputBox').focus();
   }
 
   

@@ -40,6 +40,16 @@ class Stats {
 	this.hint++;
   }  
  
+  count_mistakes()
+  {
+	  return this.error+this.hint*3;
+  }
+ 
+  persent_accuracy()
+  {
+	  return Math.round(  (this.ok/(this.count_mistakes()+this.ok)) * 100 )
+  }
+ 
   seconds(){
 	  if (this.start==null) 
 		  return 0;
