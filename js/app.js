@@ -34,6 +34,7 @@ $(function () {
 
   let lastValue = "";
 
+
   
   new bootstrap.Tooltip($('#statPlace1')[0], { title: 'Good clicks',  placement: 'left' });
   new bootstrap.Tooltip($('#statPlace2')[0], { title: 'Bad clicks',   placement: 'left'  });
@@ -202,6 +203,8 @@ $(function () {
     const phrase = cleanString( setData.data[currentIndex].text) ;
     const value = $inputBox.val();
 
+	$('#inputBox').focus();
+
 	stats.event_hint();
 
     $placeholders.children().each(function (i) {
@@ -211,6 +214,8 @@ $(function () {
         return false;
       }
     });  
+	
+
   }
 
 
@@ -223,6 +228,8 @@ $(function () {
 	}
     renderPhrase();	
 	
+	$('#inputBox').focus();
+	
   }
 
   function gotoPervPhrase()
@@ -233,12 +240,15 @@ $(function () {
 	  currentIndex=currentIndex;
 	}
     renderPhrase();	
+	$('#inputBox').focus();
   }
 
 
   function sayPharase()
   {
 	  speakPhrase(setData.data[currentIndex].text);
+	  
+	  $('#inputBox').focus();
   }
 
   
