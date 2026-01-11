@@ -136,7 +136,10 @@ $(function () {
   // Typing handler
   $inputBox.on("input", function (e) {
     const phrase = cleanString( setData.data[currentIndex].text );
-    const value = $(this).val();
+    var value = $(this).val();
+	
+	// remove punctuation and multiple spaces
+	value = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ").replace(/\s+/g, ' ');
 
     // Detect backspace
     if (value.length < lastValue.length) {
@@ -176,7 +179,8 @@ $(function () {
       }
     });
 
-	let fixedvalue = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ");
+	let fixedvalue = value;
+	
     // Success check
     if (
       value.length === phrase.length &&
