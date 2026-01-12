@@ -57,10 +57,10 @@ function processCSV(csv) {
         totalTime.push(d.time/60);
     });
 
-    drawPlot("plot-ok", days, totalOk, "Total OK");
+    drawPlot("plot-ok", days, totalOk, "OK");
     drawPlot("plot-ok-error", days, okPerError, "Error/OK");
     drawPlot("plot-ok-hint", days, okPerHint, "Hint/OK");
-    drawPlot("plot-time", days, totalTime, "Total Time (minutes)");
+    drawPlot("plot-time", days, totalTime, "Time (minutes)");
 }
 
 function drawPlot(elementId, x, y, title) {
@@ -75,10 +75,16 @@ function drawPlot(elementId, x, y, title) {
     const layout = {
         title: title,
 		xaxis: {
-            title: "Date",
-            tickformat: "%d.%m",  
-            tickangle: -45
-        },
+			title: "Date",
+			tickmode: "array",
+			tickvals: x,
+			ticktext: x.map(d => {
+				const date = (d instanceof Date) ? d : new Date(d);
+				return String(date.getDate()).padStart(2, "0") + "." +
+					   String(date.getMonth() + 1).padStart(2, "0");
+			}),
+			tickangle: -45
+		},
         yaxis: { automargin: true },
 		bargap: 0.2,
         margin: { t: 50 }
