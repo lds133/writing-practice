@@ -18,8 +18,8 @@ function processCSV(csv) {
 
         const dateTime = cols[0];
         //const day = dateTime.split(" ")[0]; // DD.MM.YY
-		const date = dateTime.split(" ")[0].split(".");
-		const day = (parseInt(date[2])+2000).toString()+"-"+date[1]+"-"+date[0];
+		const [d,m,y] = dateTime.split(" ")[0].split(".");
+		const day = "20"+y+"-"+m+"-"+d;
 
 
         const ok = parseFloat(cols[4]);
@@ -68,14 +68,19 @@ function drawPlot(elementId, x, y, title) {
         x: x,
         y: y,
         mode: "markers+lines",
-        type: "scatter",
-        marker: { size: 8 }
+        type: "bar"
+        
     };
 
     const layout = {
         title: title,
-        xaxis: { title: "Date" },
+		xaxis: {
+            title: "Date",
+            tickformat: "%d.%m",  
+            tickangle: -45
+        },
         yaxis: { automargin: true },
+		bargap: 0.2,
         margin: { t: 50 }
     };
 
