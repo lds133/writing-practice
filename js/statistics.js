@@ -17,7 +17,10 @@ function processCSV(csv) {
         const cols = line.split(",");
 
         const dateTime = cols[0];
-        const day = dateTime.split(" ")[0]; // DD.MM.YY
+        //const day = dateTime.split(" ")[0]; // DD.MM.YY
+		const date = dateTime.split(" ")[0].split(".");
+		const day = (parseInt(date[2])+2000).toString()+"-"+date[1]+"-"+date[0];
+
 
         const ok = parseFloat(cols[4]);
         const error = parseFloat(cols[5]);
