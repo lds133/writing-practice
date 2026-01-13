@@ -6,22 +6,35 @@
   "tags": ["B1", "opis","mówienie"],
   "data": [
     { "text": "Zdjęcie przedstawia młodą rodzinę zgromadzoną w dużym salonie wokół kominka." },
-    { "text": "Na pierwszym planie widzimy dwie małe dziewczynki, które siedzą na podłodze i bawią się klockami. Wokół nich są inne zabawki." },
+    { "text": "Na pierwszym planie widzimy dwie małe dziewczynki, " },
+	{ "text": "które siedzą na podłodze i bawią się klockami." },
+    { "text": "Wokół nich są inne zabawki." },
     { "text": "Dziewczynki mają jasne włosy." },
 	{ "text": "Jedna z nich ma kucyki." },
-	{ "text": "Ubrane są w jasne podkoszulki, ciemne spodenki oraz ciemne skarpetki. Są bardzo spokojne i bawią się grzecznie." },
+	{ "text": "Ubrane są w jasne podkoszulki, ciemne spodenki oraz ciemne skarpetki." },
+	{ "text": "Są bardzo spokojne i bawią się grzecznie." },
 	{ "text": "Za nimi na drugim planie, bliżej kominka, znajdują się rodzice." },
-	{ "text": "Z lewej strony - mama, miła blondynka o niezbyt długich włosach, klęczy na jednym kolanie i trzyma w ręku drewno, które zaraz włoży do kominka." },
+	{ "text": "Z lewej strony - mama, miła blondynka o niezbyt długich włosach, " },
+    { "text": "klęczy na jednym kolanie i trzyma w ręku drewno, " },
+	{ "text": "które zaraz włoży do kominka." },
 	{ "text": "Jednocześnie z uśmiechem patrzy na swoje córeczki." },
 	{ "text": "Jej ubranie jest praktyczne: dżinsy oraz różowa, pastelowa bluzka." },
 	{ "text": "Z prawej strony - młody tata stoi obok kominka i trzyma na kolanie najmłodsze dziecko." },
 	{ "text": "Jest bardzo szczęśliwy, więc przytula się do jego główki. " },
-	{ "text": "Maleństwo siedzi spokojnie na kolanie taty i z zainteresowaniem przygląda się zabawie starszych sióstr." },
+	{ "text": "Maleństwo siedzi spokojnie na kolanie taty" },
+	{ "text": "i z zainteresowaniem przygląda się zabawie starszych sióstr." },
 	{ "text": "Ojciec ma na sobie jasne spodnie i niebieską koszulę z krótkim rękawem." },
 	{ "text": "Pokój, w którym przebywa rodzina, wygląda na dość duży i jasny. " },
 	{ "text": "Podłoga jest drewniana." },
-	{ "text": "Kominek z czerwonej i białej cegły zajmuje najwięcej miejsca na zdjęciu i jednocześnie najbardziej skupia uwagę domowników. " },
-	{ "text": "W głębi, z lewej strony kominka, znajduje się kilka zielonych roślin, które widać wyraźnie na tle białych ścian." },
-	{ "text": "Rodzina jest spokojna i szczęśliwa, a atmosfera na zdjęciu jest pełna pozytywnych emocji: poczucia bezpieczeństwa, harmonii oraz miłości rodziców do dzieci." }
+	{ "text": "Kominek z czerwonej i białej cegły zajmuje najwięcej miejsca na zdjęciu " },
+	{ "text": "i jednocześnie najbardziej skupia uwagę domowników. " },
+	{ "text": "W głębi, z lewej strony kominka, " },
+	{ "text": "znajduje się kilka zielonych roślin, " },
+	{ "text": "które widać wyraźnie na tle białych ścian." },
+	{ "text": "Rodzina jest spokojna i szczęśliwa," },
+	{ "text": "a atmosfera na zdjęciu jest pełna pozytywnych emocji:" },
+	{ "text": "poczucia bezpieczeństwa, harmonii oraz miłości rodziców do dzieci." }
+
+	
   ]
 }
