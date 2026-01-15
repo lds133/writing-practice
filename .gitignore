@@ -1,2 +1,5 @@
 /tmp
 
+/tts/.venv
+/tts/voice
+/tts/models
