@@ -6,6 +6,10 @@ from pathlib import Path
 MODEL_DIR = "models"
 MODEL = MODEL_DIR + "/pl_PL-gosia-medium.onnx"
 CONFIG = MODEL_DIR + "/pl_PL-gosia-medium.onnx.json"
+DATA_DIR = "../data"
+VOICE_DIR = "voice"
+
+
 
 
 
@@ -23,14 +27,12 @@ def convert(sentence: str, filename: str):
         text=True,
         check=True
     )
-    
-    
-    
+
     
 
-DATA_DIR = "../data"
-VOICE_DIR = "voice"
-    
+if not os.path.exists(VOICE_DIR):
+    os.makedirs(VOICE_DIR)
+
 
 for file_name in os.listdir(DATA_DIR):
     if not file_name.endswith(".json"):
