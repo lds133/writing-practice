@@ -14,8 +14,12 @@ VOICE_DIR = "voice"
 
 
 def convert(sentence: str, filename: str):
+
+    if os.path.isfile(filename):
+        print(f"Skip : {filename} -> {text}")
+        return
+        
     print(f"Converting: {filename} -> {text}")
-    
     subprocess.run(
         [
             "piper",
@@ -37,6 +41,8 @@ if not os.path.exists(VOICE_DIR):
 for file_name in os.listdir(DATA_DIR):
     if not file_name.endswith(".json"):
         continue
+        
+    print(">>>",file_name)
 
     file_path = os.path.join(DATA_DIR, file_name)
     base_name = os.path.splitext(file_name)[0]
