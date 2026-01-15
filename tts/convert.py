@@ -7,7 +7,7 @@ MODEL_DIR = "models"
 MODEL = MODEL_DIR + "/pl_PL-gosia-medium.onnx"
 CONFIG = MODEL_DIR + "/pl_PL-gosia-medium.onnx.json"
 DATA_DIR = "../data"
-VOICE_DIR = "voice"
+VOICE_DIR = "../voice"
 
 
 
