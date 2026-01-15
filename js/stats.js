@@ -1,5 +1,4 @@
 
-
 class Stats {
   constructor() {
     this.event_start();
@@ -40,6 +39,8 @@ class Stats {
 	this.hint++;
   }  
  
+
+ 
   count_mistakes()
   {
 	  return this.error+this.hint*3;
@@ -70,8 +71,7 @@ class Stats {
 	return text;
   }
   
-  get_result()
-  {
+  get_result()  {
 	  let res = Math.round(  (this.ok/(this.error+this.hint+this.ok)) * 100 );
 	  let spd = ((this.ok+this.error+this.hint)/this.seconds()).toFixed(2);
 	  return res.toString()+"%, "+spd.toString()+" click/sec";
@@ -81,3 +81,89 @@ class Stats {
   
   
 };
+
+
+class DoubleStats {
+
+  constructor() {
+    this.curr = new Stats();
+	this.total = new Stats();
+  }
+
+  event_start(){
+    this.curr.event_start();
+	this.total.event_start();
+  }
+  
+  event_stop(){
+    this.curr.event_stop();
+	this.total.event_stop();
+  }
+
+  event_ok() {
+    this.curr.event_ok();
+	this.total.event_ok();
+	  
+  }  
+
+  event_error() {
+    this.curr.event_error();
+	this.total.event_error();
+  }  
+
+  event_hint() {
+    this.curr.event_hint();
+	this.total.event_hint();
+  }  
+ 
+
+
+
+}
+
+async function isSaveAvailable() {
+  try {
+    const res = await fetch("/save", { method: "HEAD" });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+
+
+function formatDateTime(date = new Date()) {
+  const pad = (n) => String(n).padStart(2, '0');
+  const day = pad(date.getDate());
+  const month = pad(date.getMonth() + 1); // months are 0-based
+  const year = pad(date.getFullYear() % 100); // last 2 digits
+  const hours = pad(date.getHours());
+  const minutes = pad(date.getMinutes());
+  const seconds = pad(date.getSeconds());
+  return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
+}
+
+
+
+function write_stat(url,index,length,stats)
+{
+	if (stats.ok!=0){
+		fetch("/save", {
+		  method: "POST",
+		  headers: {
+			"Content-Type": "application/json"
+		  },
+		  body: JSON.stringify({
+			rows: [
+			  { date: formatDateTime(), file: url, index: index, lenght: length, ok: stats.ok, error: stats.error, hint: stats.hint, time: stats.seconds() }
+			]
+		  })
+		})
+		.then(res => res.json())
+		.then(data => console.log(data));	
+	}
+	
+	stats.event_start()
+	
+	
+}

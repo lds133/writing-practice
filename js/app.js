@@ -1,7 +1,10 @@
+
 $(function () {
   // Read JSON URL from query string
   const params = new URLSearchParams(window.location.search);
-  const dataUrl = "data/"+params.get("data");
+  const dataFile = params.get("data");
+  const dataUrl = "data/"+dataFile;
+  var isSave = false;
 
   if (!dataUrl) {
     alert("No data file specified.");
@@ -12,7 +15,7 @@ $(function () {
   let setData = null;
   let currentIndex = 0;
   let phraseCompleted = false;
-  var stats = new Stats();	
+  var stats = new DoubleStats();	
 
   const $placeholders = $("#placeholders");
   const $inputBox = $("#inputBox");
@@ -34,7 +37,7 @@ $(function () {
 
   let lastValue = "";
 
-
+  
   
   new bootstrap.Tooltip($('#statPlace1')[0], { title: 'Good clicks',  placement: 'left' });
   new bootstrap.Tooltip($('#statPlace2')[0], { title: 'Bad clicks',   placement: 'left'  });
@@ -63,13 +66,18 @@ $(function () {
 	  return input.replace(/[^\p{L}^\d]+/gu, ' ').replace(/\s+/g, ' ').trim();
 	}
 
-  function init() {
+  async function init() {
+	isSave = await isSaveAvailable();
+    console.log("Save available:", isSave);
     $("#totalCount").text(setData.data.length);
     renderPhrase();
   }
 
   function renderPhrase() {
+	  
     const phrase = cleanString( setData.data[currentIndex].text );
+
+	save_stat();
 	
 	phraseCompleted = false;
 	
@@ -163,9 +171,9 @@ $(function () {
 		stats.event_error();
       }
 	  
-	  $("#statPlace1").html(stats.ok.toString());
-	  $("#statPlace2").html(stats.count_mistakes().toString());
-	  $("#statPlace3").html(stats.persent_accuracy().toString()+"%");
+	  $("#statPlace1").html(stats.total.ok.toString());
+	  $("#statPlace2").html(stats.total.count_mistakes().toString());
+	  $("#statPlace3").html(stats.total.persent_accuracy().toString()+"%");
 	  
     }
 
@@ -189,13 +197,19 @@ $(function () {
     ) {
       playSound(sounds.success);
 	  phraseCompleted = true;
+	  save_stat();
     }
 
     lastValue = value;
   });
 
 
-
+  function save_stat(){
+	if (isSave){
+		const phrase = cleanString( setData.data[currentIndex].text );
+		write_stat(dataFile,currentIndex,phrase.length,stats.curr);
+	}
+  }
 
 
 
