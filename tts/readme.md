@@ -14,6 +14,8 @@
 
 ## envirionment
 
+tested on Python 3.10
+
 ```
 sudo apt install -y python3 python3-venv python3-pip espeak-ng ffmpeg
 ```
@@ -55,7 +57,7 @@ source .venv/bin/activate
 
 python convert.py
 ```
-
+pip freeze > requirements.txt
 
   
   

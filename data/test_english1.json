@@ -1,0 +1,11 @@
+{
+  "title": "Example",
+  "language": "en-US",
+  "notes": "English test set",
+  "tags": ["test"],
+  "data": [
+    { "text": "Practice makes writing better!",
+      "notes": "Type what you hear."	},
+    { "text": "More practice, better result." }
+  ]
+}

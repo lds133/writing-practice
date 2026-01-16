@@ -1,0 +1,15 @@
+{
+  "title": "Ejemplo",
+  "language": "es-ES",
+  "notes": "Conjunto de pruebas en españo",
+  "tags": ["test"],
+  "data": [
+    {
+      "text": "¡La práctica mejora la escritura!",
+      "notes": "Escribe lo que escuchas."
+    },
+    {
+      "text": "Más práctica, mejor resultado."
+    }
+  ]
+}

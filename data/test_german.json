@@ -1,0 +1,15 @@
+{
+  "title": "Beispiel",
+  "language": "de-DE",
+  "notes": "Deutscher Testsatz",
+  "tags": ["test"],
+  "data": [
+    {
+      "text": "Übung macht das Schreiben besser!",
+      "notes": "Tippe ein, was du hörst."
+    },
+    {
+      "text": "Mehr Übung, besseres Ergebnis."
+    }
+  ]
+}

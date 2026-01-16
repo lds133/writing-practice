@@ -1,0 +1,49 @@
+{
+  "title": "Wybierz zestaw ćwiczeń",
+  "notes": "",  
+	
+  "datasets": [
+    "dyktanda01.json",
+	"dyktanda02.json",
+	"dyktanda03.json",
+	
+	"dyktanda11.json",
+	"dyktanda12.json",
+	"dyktanda13.json",
+	"dyktanda14.json",		
+	"dyktanda15.json",
+	"dyktanda16.json",
+	"dyktanda17.json",
+
+    "czasownik01.json",
+	"czasownik02.json",
+	"czasownik03.json",
+	"czasownik04.json",
+	"czasownik05.json",
+
+	"dyktanda21.json",
+	"dyktanda22.json",
+	"dyktanda23.json",
+	"dyktanda24.json",		
+	"dyktanda25.json",
+	"dyktanda26.json",
+	"dyktanda27.json",
+	"dyktanda28.json",
+	"dyktanda29.json",
+	"dyktanda30.json",
+	"dyktanda31.json",
+	"dyktanda32.json",
+	"dyktanda33.json",
+	"dyktanda34.json",	  
+	  
+    "letter01.json",
+	"letter02.json",
+	"feedback01.json",
+	"writing01.json",
+    "text01.json",
+    "text02.json",	
+	"text03.json",	
+    "image01.json"
+  ]
+
+}
