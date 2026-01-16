@@ -1,0 +1,15 @@
+{
+  "title": "Przykład",
+  "language": "pl-PL",
+  "notes": "Zestaw testowy języka polskiego",
+  "tags": ["test"],
+  "data": [
+    {
+      "text": "Praktyka poprawia pisanie!",
+      "notes": "Wpisz to, co słyszysz."
+    },
+    {
+      "text": "Więcej praktyki, lepszy rezultat."
+    }
+  ]
+}

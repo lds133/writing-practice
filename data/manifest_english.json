@@ -1,0 +1,12 @@
+{
+  "title": "Select Practice Set",
+  "notes": "",  
+	
+	
+	
+  "datasets": [
+    "test_english1.json",
+	"test_english2.json"
+  ]
+
+}

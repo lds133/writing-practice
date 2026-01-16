@@ -2,32 +2,37 @@
 
 
 
-## download model
+## download models
 
 ```
 ./download_models.sh
 ```
 
 
-*pl_PL-gosia-medium.onnx* and  *pl_PL-gosia-medium.onnx.json* should appear in the *models* folder
-
 
 ## envirionment
+
+tested on Python 3.10
 
 ```
 sudo apt install -y python3 python3-venv python3-pip espeak-ng ffmpeg
 ```
 
-
 ```
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+```
 pip install piper-tts
 pip install pydub
 ```
+or 
+```
+pip install -r requirements.txt
+```
 
-
-## test
+## test (optoinal)
 
 
 ```

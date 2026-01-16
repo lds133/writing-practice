@@ -1,0 +1,18 @@
+{
+  "title": "Example 2",
+  "language": "en-US",
+  "notes": "Test set #2",
+  "tags": ["test"],
+  "data": [
+    {
+      "text": "Consistency is the key to improvement.",
+      "notes": "Type what you hear."
+    },
+    {
+      "text": "Small steps lead to big progress."
+    },
+    {
+      "text": "Focus and patience bring better results."
+    }
+  ]
+}
