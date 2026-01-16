@@ -1,4 +1,4 @@
-var VOICE_ENABLED = false
+var VOICE_ENABLED = true
 const VOICE_FOLDER = "voice"
 const VOICE_EXT = ".ogg"
 
@@ -56,12 +56,15 @@ $(function () {
 
 
 
+  const saved_voice_option = localStorage.getItem('soundOption');
+  if (saved_voice_option !== null) {
+     VOICE_ENABLED = JSON.parse(saved_voice_option); 
+  }
   if (VOICE_ENABLED) {
       $('#btnCheckVoice').prop('checked', true);
   } else {
   	  $('#btnCheckTTS').prop('checked', true);
   }
-
   $("#btnCheckTTS").on("click", optionsChanged );
   $("#btnCheckVoice").on("click", optionsChanged );
 
@@ -311,6 +314,7 @@ $(function () {
   function optionsChanged()
   {
 	  VOICE_ENABLED = $('#btnCheckVoice').is(':checked');
+	  localStorage.setItem('soundOption', JSON.stringify(VOICE_ENABLED));
   }
   
   
