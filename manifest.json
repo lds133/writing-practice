@@ -1,17 +1,17 @@
 {
-  "title": "Select Practice Set",
+  "title": "Writing practice",
   "notes": "",  
 	
-  "manifests":[
+  "links":[
 
 	{
 	  "title": "English",
 	  "notes": "",  
-	  "file": "data/manifest_english.json"
+	  "file": "manifest_english.json"
 	},
 	{
 	  "title": "Polski",
-	  "file": "data/manifest_polish.json"
+	  "file": "manifest_polish.json"
 	}
  
   

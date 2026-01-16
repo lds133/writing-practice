@@ -21,12 +21,12 @@
               <h1 id="datasetTitle" class="h4 mb-3">Select Practice Set</h1>
 			</div>
 			<div>
-            <a href="statistics.html" class="btn btn-outline-secondary btn-sm float-end">Statistics</a>
+			<a id="buttonBack" href="index.html"  class="btn btn-outline-secondary btn-sm float-end m-1">Back</a>
+            <a href="statistics.html" class="btn btn-outline-secondary btn-sm float-end m-1">Statistics</a>
+			
 			</div>
           </div>		
 		
-
-			
 		  <p id="datasetNotes" class="h6 mb-3"></p>
 
           <div id="datasetList" class="list-group mb-3"></div>
@@ -34,6 +34,11 @@
           <nav>
             <ul class="pagination justify-content-center mb-0" id="pagination"></ul>
           </nav>
+		  
+		<div class="d-flex align-items-center justify-content-evenly">
+		  <div id="divLinks"></div>
+		</div>		  
+		  
         </div>
 		
 		
@@ -49,7 +54,9 @@ $(function () {
   let datasets = [];
   let currentPage = 1;
   
-  let manifestFileName = 'manifest.json';
+  const params = new URLSearchParams(window.location.search);
+  const paramFile = params.get("data");  
+  const manifestFileName = paramFile==null ? 'manifest.json' : 'data/'+paramFile;
   
 
   fetch(manifestFileName)
@@ -57,12 +64,23 @@ $(function () {
     .then(manifest => {
       datasets = manifest.datasets || [];
       $('#datasetTitle').text( manifest.title || "Select Practice Set" );
-	  $('#datasetNotes').text( manifest.notes || "" );	  
+	  $('#datasetNotes').text( manifest.notes || "" );	 
+
+
+      if (manifest.links)
+	  {	  $("#buttonBack").hide(); 
+		  var linkstext = "";	
+		  for (const lnk of manifest.links)
+		  { const link = `index.html?data=${encodeURIComponent(lnk.file)}`;
+			 linkstext += `<a type="button" class="btn btn-primary btn-lg m-2" href="${link}">${lnk.title}</a>`
+		  }
+		  $('#divLinks').html(  linkstext );	 
+      }	  
       renderPage(1);
       renderPagination();
     })
     .catch(() => {
-      $('#datasetList').html('<div class="text-danger">Failed to load manifest.</div>');
+      $('#datasetList').html('<div class="text-danger">Failed to load manifest ' + manifestFileName + '.</div>');
     });
 
 
