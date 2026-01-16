@@ -1,4 +1,4 @@
-const VOICE_ENABLED = false
+const VOICE_ENABLED = true
 const VOICE_FOLDER = "voice"
 const VOICE_EXT = ".ogg"
 

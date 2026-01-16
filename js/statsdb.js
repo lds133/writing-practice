@@ -32,7 +32,7 @@ async function DB_append(url, index, length, stats) {
     const store = tx.objectStore("rows");
 
     store.add({
-        date: formatDateTime().toString(),
+        date: new Date(),
         file: url,
         index,
         length,
