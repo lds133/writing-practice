@@ -1,8 +1,85 @@
+const CSV_FILE_NAME = "wp_statistics.csv";
+
+
 $(document).ready(function () {
+	
+
+	$("#downloadCsvBtn").on("click", downloadCSV );
+
+
+
 	
 	processRows();
 		
 });
+
+
+
+function formatDate(date) {
+    const pad = n => String(n).padStart(2, '0');
+
+    const year = date.getFullYear();
+    const month = pad(date.getMonth() + 1); // Months are 0–11
+    const day = pad(date.getDate());
+
+    const hours = pad(date.getHours());
+    const minutes = pad(date.getMinutes());
+    const seconds = pad(date.getSeconds());
+
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+}
+
+
+
+
+
+async function downloadCSV()
+{
+	const lf = "\r\n";
+	const comma = ", "
+	
+	const rows = await DB_getall();
+	const text = [];
+	text.push("date,file,index,length,ok,error,hint,time")
+	rows.forEach(row => {
+		text.push(
+			'"'+formatDate(row.date) + '"'+comma+
+			'"'+row.file.toString()+'"'+comma+
+			row.index.toString()+comma+
+			row.length.toString()+comma+
+			row.ok.toString()+comma+
+			row.error.toString()+comma+
+			row.hint.toString()+comma+
+			row.time.toString()
+			);
+    });	
+	
+	const csvText = text.join(lf);
+	downloadFile(CSV_FILE_NAME, csvText);	
+
+}
+
+
+
+function downloadFile(filename, text) {
+
+    const csvText = text;
+
+    const blob = new Blob([csvText], { type: "text/csv;charset=utf-8;" });
+
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.href = url;
+    link.download = filename;
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+}
+
 
 
 
@@ -12,10 +89,16 @@ async function processRows() {
     const dataByDay = {};
 	
 	const rows = await DB_getall();
+	
+	console.log("DB:",rows.length,"rows");
 
     rows.forEach(row => {
-		const [d,m,y] = row.date.split(" ")[0].split(".");
-		const day = "20"+y+"-"+m+"-"+d;	
+
+		let d = row.date.getDate().toString().padStart(2, '0');
+        let m = (row.date.getMonth()+1).toString().padStart(2, '0');
+        let y = row.date.getFullYear().toString();
+		
+		const day = y+"-"+m+"-"+d;	
         if (!dataByDay[day]) 
             dataByDay[day] = {  ok: 0, error: 0, hint: 0, time: 0 };
         dataByDay[day].ok += row.ok;

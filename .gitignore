@@ -1,5 +1,8 @@
-/tmp
+/voice
 
 /tts/.venv
-/voice
 /tts/models
+
+
+# WSL artefacts 
+*.Identifier
