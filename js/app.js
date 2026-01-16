@@ -1,10 +1,15 @@
+const VOICE_ENABLED = false
+const VOICE_FOLDER = "voice"
+const VOICE_EXT = ".ogg"
+
+
 
 $(function () {
   // Read JSON URL from query string
   const params = new URLSearchParams(window.location.search);
   const dataFile = params.get("data");
   const dataUrl = "data/"+dataFile;
-  var isSave = false;
+
 
   if (!dataUrl) {
     alert("No data file specified.");
@@ -67,8 +72,9 @@ $(function () {
 	}
 
   async function init() {
-	isSave = await isSaveAvailable();
-    console.log("Save available:", isSave);
+	  
+	DB_open();  
+	  
     $("#totalCount").text(setData.data.length);
     renderPhrase();
   }
@@ -205,10 +211,15 @@ $(function () {
 
 
   function save_stat(){
-	if (isSave){
+	  
+	  
+	if (stats.curr.ok!=0)
+	{
 		const phrase = cleanString( setData.data[currentIndex].text );
-		write_stat(dataFile,currentIndex,phrase.length,stats.curr);
+		DB_append(dataFile,currentIndex,phrase.length,stats.curr);
 	}
+	  
+
   }
 
 
@@ -251,7 +262,7 @@ $(function () {
     if (currentIndex > 0) {
       currentIndex--;
     } else {
-	  currentIndex=currentIndex;
+	    currentIndex=setData.data.length - 1;
 	}
     renderPhrase();	
 	$('#inputBox').focus();
@@ -260,7 +271,19 @@ $(function () {
 
   function sayPharase()
   {
-	  speakPhrase(setData.data[currentIndex].text);
+	  let text = setData.data[currentIndex].text;
+	  
+	  if (VOICE_ENABLED)
+	  {
+		  let url = VOICE_FOLDER+"/"+ dataFile.replace(/\.[^/.]+$/, "")+"_"+currentIndex.toString().padStart(4, '0')+VOICE_EXT;
+		  console.log("Play:",url, text);
+		  let voice  =  new Audio(url);
+		  playSound(voice);
+	  } else
+	  {
+		  console.log("Say:", text);
+	      speakPhrase(text);
+	  }
 	  
 	  $('#inputBox').focus();
   }

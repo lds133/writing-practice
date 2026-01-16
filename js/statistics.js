@@ -1,45 +1,27 @@
 $(document).ready(function () {
-    const csvPath = "tmp/data.csv";
-
-    fetch(csvPath)
-        .then(response => response.text())
-        .then(text => processCSV(text))
-        .catch(err => console.error("CSV load error:", err));
+	
+	processRows();
+		
 });
 
-function processCSV(csv) {
-    const lines = csv.trim().split("\n");
-    const headers = lines.shift().split(",");
+
+
+
+async function processRows() {
 
     const dataByDay = {};
+	
+	const rows = await DB_getall();
 
-    lines.forEach(line => {
-        const cols = line.split(",");
-
-        const dateTime = cols[0];
-        //const day = dateTime.split(" ")[0]; // DD.MM.YY
-		const [d,m,y] = dateTime.split(" ")[0].split(".");
-		const day = "20"+y+"-"+m+"-"+d;
-
-
-        const ok = parseFloat(cols[4]);
-        const error = parseFloat(cols[5]);
-        const hint = parseFloat(cols[6]);
-        const time = parseFloat(cols[7]);
-
-        if (!dataByDay[day]) {
-            dataByDay[day] = {
-                ok: 0,
-                error: 0,
-                hint: 0,
-                time: 0
-            };
-        }
-
-        dataByDay[day].ok += ok;
-        dataByDay[day].error += error;
-        dataByDay[day].hint += hint;
-        dataByDay[day].time += time;
+    rows.forEach(row => {
+		const [d,m,y] = row.date.split(" ")[0].split(".");
+		const day = "20"+y+"-"+m+"-"+d;	
+        if (!dataByDay[day]) 
+            dataByDay[day] = {  ok: 0, error: 0, hint: 0, time: 0 };
+        dataByDay[day].ok += row.ok;
+        dataByDay[day].error += row.error;
+        dataByDay[day].hint += row.hint;
+        dataByDay[day].time += row.time;	
     });
 
     const days = Object.keys(dataByDay).sort();
@@ -61,6 +43,7 @@ function processCSV(csv) {
     drawPlot("plot-ok-error", days, okPerError, "Error/OK");
     drawPlot("plot-ok-hint", days, okPerHint, "Hint/OK");
     drawPlot("plot-time", days, totalTime, "Time (minutes)");
+
 }
 
 function drawPlot(elementId, x, y, title) {

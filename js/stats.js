@@ -79,8 +79,14 @@ class Stats {
   }
   
   
+
+  
   
 };
+
+
+
+
 
 
 class DoubleStats {
@@ -121,49 +127,11 @@ class DoubleStats {
 
 }
 
-async function isSaveAvailable() {
-  try {
-    const res = await fetch("/save", { method: "HEAD" });
-    return res.ok;
-  } catch {
-    return false;
-  }
-}
 
 
 
-function formatDateTime(date = new Date()) {
-  const pad = (n) => String(n).padStart(2, '0');
-  const day = pad(date.getDate());
-  const month = pad(date.getMonth() + 1); // months are 0-based
-  const year = pad(date.getFullYear() % 100); // last 2 digits
-  const hours = pad(date.getHours());
-  const minutes = pad(date.getMinutes());
-  const seconds = pad(date.getSeconds());
-  return `${day}.${month}.${year} ${hours}:${minutes}:${seconds}`;
-}
 
 
 
-function write_stat(url,index,length,stats)
-{
-	if (stats.ok!=0){
-		fetch("/save", {
-		  method: "POST",
-		  headers: {
-			"Content-Type": "application/json"
-		  },
-		  body: JSON.stringify({
-			rows: [
-			  { date: formatDateTime(), file: url, index: index, lenght: length, ok: stats.ok, error: stats.error, hint: stats.hint, time: stats.seconds() }
-			]
-		  })
-		})
-		.then(res => res.json())
-		.then(data => console.log(data));	
-	}
-	
-	stats.event_start()
-	
-	
-}
+
+
