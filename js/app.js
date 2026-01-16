@@ -238,8 +238,10 @@ $(function () {
 	if (stats.curr.ok!=0)
 	{
 		const phrase = cleanString( setData.data[currentIndex].text );
-		DB_append(dataFile,currentIndex,phrase.length,stats.curr);
+		DB_append(dataFile,currentIndex,phrase.length,stats.curr).then(function() {stats.curr.event_start();});
+		
 	}
+    
 	  
 
   }
