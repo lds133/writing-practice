@@ -313,8 +313,13 @@ $(function () {
   
   function optionsChanged()
   {
-	  VOICE_ENABLED = $('#btnCheckVoice').is(':checked');
-	  localStorage.setItem('soundOption', JSON.stringify(VOICE_ENABLED));
+	  let new_VOICE_ENABLED = $('#btnCheckVoice').is(':checked');
+	  if (VOICE_ENABLED!=new_VOICE_ENABLED)
+	  {   VOICE_ENABLED =new_VOICE_ENABLED;
+		  localStorage.setItem('soundOption', JSON.stringify(VOICE_ENABLED));
+		  sayPharase();
+	  }
+
   }
   
   
