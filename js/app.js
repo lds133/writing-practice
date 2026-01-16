@@ -1,4 +1,4 @@
-const VOICE_ENABLED = true
+var VOICE_ENABLED = false
 const VOICE_FOLDER = "voice"
 const VOICE_EXT = ".ogg"
 
@@ -48,6 +48,25 @@ $(function () {
   new bootstrap.Tooltip($('#statPlace2')[0], { title: 'Bad clicks',   placement: 'left'  });
   new bootstrap.Tooltip($('#statPlace3')[0], { title: 'Accuracy',  	placement: 'left'  });
 	
+
+  $("#nextBtn").on("click", gotoNextPhrase );
+  $("#prevBtn").on("click", gotoPervPhrase );
+  $("#hintBtn").on("click", makeHint );
+  $("#repeatBtn").on("click", sayPharase );
+
+
+
+  if (VOICE_ENABLED) {
+      $('#btnCheckVoice').prop('checked', true);
+  } else {
+  	  $('#btnCheckTTS').prop('checked', true);
+  }
+
+  $("#btnCheckTTS").on("click", optionsChanged );
+  $("#btnCheckVoice").on("click", optionsChanged );
+
+
+
 
   // Load JSON
   fetch(dataUrl)
@@ -289,10 +308,10 @@ $(function () {
   }
 
   
-  $("#nextBtn").on("click", gotoNextPhrase );
-  $("#prevBtn").on("click", gotoPervPhrase );
-  $("#hintBtn").on("click", makeHint );
-  $("#repeatBtn").on("click", sayPharase );
+  function optionsChanged()
+  {
+	  VOICE_ENABLED = $('#btnCheckVoice').is(':checked');
+  }
   
   
 });
