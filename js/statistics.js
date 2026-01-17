@@ -43,8 +43,8 @@ async function downloadCSV()
 	text.push("date,file,index,length,ok,error,hint,time")
 	rows.forEach(row => {
 		text.push(
-			'"'+formatDate(row.date) + '"'+comma+
-			'"'+row.file.toString()+'"'+comma+
+			formatDate(row.date) + comma+
+			row.file.toString()+comma+
 			row.index.toString()+comma+
 			row.length.toString()+comma+
 			row.ok.toString()+comma+
