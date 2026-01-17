@@ -35,7 +35,7 @@ function formatDate(date) {
 async function downloadCSV()
 {
 	const lf = "\r\n";
-	const comma = ", "
+	const comma = ",";
 	
 	const rows = await DB_getall();
 	const text = [];
