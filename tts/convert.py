@@ -3,15 +3,16 @@ import os
 import json
 from pathlib import Path
 from pydub import AudioSegment
-
+from TTS.api import TTS
 
 
 MODEL_DIR = "models"
 DATA_DIR = "../data"
 VOICE_DIR = "../voice"
 MODEL = {
-  "pl-PL": ["pl_PL-gosia-medium.onnx","pl_PL-gosia-medium.onnx.json"],
-  #"pl-PL": ["pl_PL-darkman-medium.onnx","pl_PL-darkman-medium.onnx.json"],
+  "pl-PL": ["pl_PL-darkman-medium.onnx","pl_PL-darkman-medium.onnx.json"],
+  #"pl-PL": ["pl_PL-gosia-medium.onnx","pl_PL-gosia-medium.onnx.json"],  
+  #"pl-PL": ["pl_PL-mc_speech-medium.onnx","pl_PL-mc_speech-medium.onnx.json"],
   "es-ES":["es_ES-davefx-medium.onnx", "es_ES-davefx-medium.onnx.json"  ],
   "de-DE":["de_DE-thorsten-medium.onnx","de_DE-thorsten-medium.onnx.json"],
   "en-US":["en_US-amy-medium.onnx","en_US-amy-medium.onnx.json"],
@@ -20,10 +21,9 @@ MODEL = {
 
 
 
-
-def convert(sentence: str, filename: str,language:str,model_file,config_file):
+def convert_Piper(sentence: str, filename: str,language:str,model_file,config_file):
         
-    print(f"Make: {filename} <- ({language}) {text}")
+    print(f"Make: {filename} <- ({language}) [{model_file}] {text}")
     subprocess.run(
         [
             "piper",
@@ -84,7 +84,10 @@ for file_name in os.listdir(DATA_DIR):
         tmp_filename = "tmp_voice.wav"
         if os.path.isfile(tmp_filename):
             os.remove(tmp_filename) 
-        convert(text, tmp_filename,language,model_file,config_file)
+        convert_Piper(text, tmp_filename,language,model_file,config_file)
+        
+        
+        
         
         # Add half a second of silence at the end, then convert to OGG.
         print(f"Convert: {tmp_filename} -> {output_filename}")
