@@ -34,9 +34,12 @@ wget -c "$BASE/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx.json?download=tru
 # ---------------------
 wget -c "$BASE/pl/pl_PL/darkman/medium/pl_PL-darkman-medium.onnx?download=true" -O pl_PL-darkman-medium.onnx
 wget -c "$BASE/pl/pl_PL/darkman/medium/pl_PL-darkman-medium.onnx.json?download=true" -O pl_PL-darkman-medium.onnx.json
-wget -c "$BASE/pl/pl_PL/darkman/medium/pl_PL-darkman-medium.onnx?download=true" -O pl_PL-gosia-medium.onnx 
+
+wget -c "$BASE/pl/pl_PL/gosia/medium/pl_PL-gosia-medium.onnx?download=true" -O pl_PL-gosia-medium.onnx 
 wget -c "$BASE/pl/pl_PL/gosia/medium/pl_PL-gosia-medium.onnx.json?download=true" -O pl_PL-gosia-medium.onnx.json 
 
+wget -c "$BASE/pl/pl_PL/mc_speech/medium/pl_PL-mc_speech-medium.onnx?download=true" -O pl_PL-mc_speech-medium.onnx 
+wget -c "$BASE/pl/pl_PL/mc_speech/medium/pl_PL-mc_speech-medium.onnx.json?download=true" -O pl_PL-mc_speech-medium.onnx.json 
 
 
 
