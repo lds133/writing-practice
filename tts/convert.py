@@ -3,7 +3,7 @@ import os
 import json
 from pathlib import Path
 from pydub import AudioSegment
-from TTS.api import TTS
+
 
 
 MODEL_DIR = "models"
@@ -21,7 +21,7 @@ MODEL = {
 
 
 
-def convert_Piper(sentence: str, filename: str,language:str,model_file,config_file):
+def convert(sentence: str, filename: str,language:str,model_file,config_file):
         
     print(f"Make: {filename} <- ({language}) [{model_file}] {text}")
     subprocess.run(
@@ -84,7 +84,7 @@ for file_name in os.listdir(DATA_DIR):
         tmp_filename = "tmp_voice.wav"
         if os.path.isfile(tmp_filename):
             os.remove(tmp_filename) 
-        convert_Piper(text, tmp_filename,language,model_file,config_file)
+        convert(text, tmp_filename,language,model_file,config_file)
         
         
         

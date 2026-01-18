@@ -62,6 +62,33 @@ python convert.py
 ```
 
 
+## pyenv
+
+
+1) install pyenv
+
+2)
+```
+
+pyenv install 3.10.14
+pyenv virtualenv 3.10.14 tts-env
+pyenv activate tts-env
+
+```
+
+
+3)
+```
+python --version
+```
+
+4) tts
+
+```
+pip install --upgrade pip setuptools wheel
+pip install TTS
+```
+
   
   
   
