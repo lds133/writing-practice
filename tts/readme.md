@@ -2,17 +2,23 @@
 
 
 
-## download models
-
-```
-./download_models.sh
-```
 
 
 
-## envirionment
+## envirionment piper
 
 tested on Python 3.10
+
+
+
+### download models
+
+```
+./download_piper_models.sh
+```
+
+
+### python
 
 ```
 sudo apt install -y python3 python3-venv python3-pip espeak-ng ffmpeg
@@ -32,7 +38,7 @@ or
 pip install -r requirements.txt
 ```
 
-## test (optoinal)
+### test (optoinal)
 
 
 ```
@@ -53,16 +59,12 @@ aplay test.wav
 Note: It is okay if the word "text" is heard before the sentence.
 
 
-## run conversion
-
-```
-source .venv/bin/activate
-
-python convert.py
-```
 
 
-## pyenv
+
+## Coqui
+
+### pyenv
 
 
 1) install pyenv
@@ -90,5 +92,21 @@ pip install TTS
 ```
 
   
+  
+## Facebook
+
+```
+pip install torch transformers soundfile numpy pydub
+```  
+  
+  
+## Run conversion
+
+update first lines to select environment
+```
+source .venv/bin/activate
+
+python convert.py
+```  
   
   
