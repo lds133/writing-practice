@@ -30,8 +30,7 @@ source .venv/bin/activate
 ```
 
 ```
-pip install piper-tts
-pip install pydub
+pip install piper-tts pydub
 ```
 or 
 ```
@@ -108,5 +107,9 @@ source .venv/bin/activate
 
 python convert.py
 ```  
+  
+
+  
+  
   
   
