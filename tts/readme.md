@@ -99,6 +99,15 @@ pip install torch transformers soundfile numpy pydub
 ```  
   
   
+## ElevenLabs
+
+```
+ pip install elevenlabs
+ pip install pydub
+
+```  
+  
+  
 ## Run conversion
 
 update first lines to select environment
@@ -107,6 +116,9 @@ source .venv/bin/activate
 
 python convert.py
 ```  
+  
+  
+  
   
 
   
