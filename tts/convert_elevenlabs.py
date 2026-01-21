@@ -5,9 +5,15 @@ from secret import ELEVENLABS_KEY
 VOICE_DIR = "../voice"
 
 VOICE = {
-  #"pl-PL": ["P9yx385KN0FOmLll8Lkx","Michał K"],
-  "pl-PL": ["V5GZ9rfeV9jjKZE5NkT7", "None"],
-
+  #"pl-PL": ["P9yx385KN0FOmLll8Lkx","Michał K"],#<-- man 1 low 
+  
+  
+  #"pl-PL": ["V5GZ9rfeV9jjKZE5NkT7", "adam"], # <--
+  #"pl-PL": ["eJLcDj3fKW65V8WhDqPI", "null"],
+  #"pl-PL": ["lehrjHysCyPSvjt0uSy6", "marta"], # <-- woman 1
+ #"pl-PL": ["zzBTsLBFM6AOJtkr1e9b", "pawel pro"], # <----- man 2
+ 
+ "pl-PL": ["aAY9hMI6VU335JUszdRs", "alexandra"], # <----- femail 2
   
   }
 
