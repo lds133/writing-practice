@@ -8,61 +8,82 @@
   ],
   "data": [
     {
-      "text": "Czym zajmujesz się na co dzień?"
+      "voice":"m0",
+	  "text": "Czym zajmujesz się na co dzień?"
+	  
     },
     {
+	  "voice":"f0",
       "text": "Mamy z mężem międzynarodową firmę meblową."
+	},
+    {
+      "voice":"f0",
+	  "text": "To pozwala nam łączyć pracę z podróżami, naszym hobby."
+	  
     },
     {
-      "text": "To pozwala nam łączyć pracę z podróżami, naszym hobby."
-    },
-    {
+	  "voice":"m0",
       "text": "Kiedy zaczęłaś podróżować?"
     },
     {
+	  "voice":"f0",
       "text": "Od piątego roku życia tańczyłam w balecie."
     },
     {
+	  "voice":"f0",	
       "text": "Występowaliśmy w całej Europie."
     },
     {
+	"voice":"f0",		
       "text": "Odwiedzałam inne kraje i poznawałam życie ich mieszkańców."
     },
     {
+		"voice":"f0",	
       "text": "Natomiast liceum to początek moich samodzielnych wyjazdów do szkół językowych w Anglii i Francji."
     },
     {
+		"voice":"m0",	
       "text": "A teraz podróżujesz sama czy w grupie?"
     },
     {
+		"voice":"f0",	
       "text": "Podróżuję z mężem i synem."
     },
     {
+		"voice":"f0",	
       "text": "To zaleta naszej biznesowo-turystycznej pracy."
     },
     {
+		"voice":"m0",	
       "text": "Jaki środek transportu lubisz najbardziej?"
     },
     {
+		"voice":"f0",	
       "text": "Dalekie podróże to oczywiście samolot."
     },
     {
+		"voice":"f0",	
       "text": "Poza tym korzystamy z różnych środków lokomocji – to zależy od kraju, w którym jesteśmy."
     },
     {
+		"voice":"f0",	
       "text": "W Tajlandii jeździliśmy na skuterze,w Holandii – rowerami."
     },
     {
+		"voice":"m0",	
       "text": "Ile znasz języków obcych?"
     },
     {
+		"voice":"f0",	
       "text": "Mówię po angielsku, więc praktycznie wszędzie mogę się porozumieć i w razie problemów, wiem, że sobie poradzę."
     },
     {
+		"voice":"m0",	
       "text": "Twoje największe marzenie podróżnicze to..."
     },
     {
-      "text": "Meksyk.A w dalszej kolejności Kanada."
+		"voice":"f0",	
+      "text": "Meksyk. A w dalszej kolejności Kanada."
     }
   ]
 }
