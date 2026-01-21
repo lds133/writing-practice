@@ -1,6 +1,9 @@
+/tts/__pycache__
+/tts/tmp_*
+
 # /voice
 
-/tts/.venv
+/tts/.venv*
 /tts/models
 
 
