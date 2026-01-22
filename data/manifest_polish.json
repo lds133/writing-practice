@@ -3,6 +3,17 @@
   "notes": "",  
 	
   "datasets": [
+  
+  "fluencydrop01.json",
+  "fluencydrop02.json",
+  "fluencydrop03.json",
+  "fluencydrop04.json",
+  "fluencydrop05.json",
+  "fluencydrop06.json",
+  "fluencydrop07.json",
+  "fluencydrop08.json",
+  
+  
     "dyktanda01.json",
 	"dyktanda02.json",
 	"dyktanda03.json",
@@ -31,10 +42,6 @@
 	"dyktanda28.json",
 	"dyktanda29.json",
 	"dyktanda30.json",
-	"dyktanda31.json",
-	"dyktanda32.json",
-	"dyktanda33.json",
-	"dyktanda34.json",	  
 	
 	"150dyktand001.json",
 	  

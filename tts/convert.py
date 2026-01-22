@@ -37,6 +37,8 @@ for file_name in os.listdir(DATA_DIR):
         text = item.get("text")
         if text is None:
             continue
+            
+        voicetype = item.get("voice")
 
         index_str = f"{idx:04d}"
         output_filename = f"{VOICE_DIR}/{base_name}_{index_str}.ogg"
@@ -51,7 +53,7 @@ for file_name in os.listdir(DATA_DIR):
         if os.path.isfile(tmp_filename):
             os.remove(tmp_filename) 
             
-        if not convert(text, tmp_filename,language):
+        if not convert(text, tmp_filename,language,voicetype):
             continue
         
         # Add half a second of silence at the end, then convert to OGG.

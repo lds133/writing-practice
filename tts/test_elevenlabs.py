@@ -9,7 +9,10 @@ audio_generator = client.text_to_speech.convert(
     #voice_id="P9yx385KN0FOmLll8Lkx",
     #voice_id="zzBTsLBFM6AOJtkr1e9b",
     voice_id="V5GZ9rfeV9jjKZE5NkT7",
-    #voice_id="eJLcDj3fKW65V8WhDqPI",
+    #voice_id="eJLcDj3fKW65V8WhDqPI", # adam lektor
+    voice_id="lehrjHysCyPSvjt0uSy6", # marta
+    voice_id="zzBTsLBFM6AOJtkr1e9b", # pawel pro
+    
     output_format="wav_22050",
 )
 

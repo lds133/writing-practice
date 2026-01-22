@@ -7,78 +7,104 @@
   ],
   "data": [
     {
+	  "voice":"m1",	
       "text": "- Anno, dlaczego stoisz na krześle?"
     },
     {
+		"voice":"f0",
       "text": "- Ponieważ bardzo boję się myszy."
     },
     {
+		"voice":"m1",
       "text": "- Czy to z tego powodu krzyczysz?"
     },
     {
+		"voice":"f0",
       "text": "- Tak, wrzeszczę z tego powodu."
     },
     {
+		"voice":"f0",
       "text": "Przecież słyszysz."
     },
     {
+		"voice":"m1",
       "text": "- Chyba musisz prosić mnie o pomoc."
     },
     {
+		"voice":"f0",
       "text": "- Nigdy o nic cię nie proszę, ale teraz..."
     },
     {
+		"voice":"m1",
       "text": "- Teraz to robisz?"
     },
     {
+		"voice":"f0",
       "text": "- Robię, bo muszę."
     },
     {
+		"voice":"m1",
       "text": "- Może wolisz zadzwonić po policję?"
     },
     {
+		"voice":"f0",
       "text": "- Dlaczego kpisz?"
     },
     {
+		"voice":"m1",
       "text": "- Nie kpię."
     },
     {
+		"voice":"m1",
       "text": "Tylko trochę śmieszy mnie ta cała sytuacja."
     },
     {
+		
+		"voice":"f0",
       "text": "- Piotrze, czy lubisz patrzeć, jak cierpię?"
     },
     {
+		"voice":"m1",
       "text": "- Przecież nie patrzę."
     },
     {
+		"voice":"f0",
       "text": "- Więc zrobisz coś wreszcie?"
     },
     {
+		"voice":"m1",
       "text": "- Właśnie o tym myślę."
     },
     {
+		"voice":"f0",
       "text": "- Widzę, że doskonale się bawisz."
     },
     {
+		"voice":"m1",
       "text": "- Chyba nie mówisz tego poważnie?"
     },
     {
+		"voice":"f0",
       "text": "- To dlaczego nic nie robisz?"
     },
     {
+		"voice":"m1",
       "text": "- Dlatego, że..."
     },
     {
+		"voice":"f0",
       "text": "- Dlatego, że ty też boisz się myszy."
     },
     {
+		"voice":"f0",
       "text": "Prawda?"
     },
     {
+		"voice":"f0",
       "text": "Czemu milczysz?"
     },
     {
+		"voice":"m1",
       "text": "- Wstydzę się."
     }
   ]
