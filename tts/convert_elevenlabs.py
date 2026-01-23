@@ -12,7 +12,7 @@ VOICE = [
   ["pl-PL", "eJLcDj3fKW65V8WhDqPI", "null",       "m","3"],# <-   male 
   ["pl-PL", "lehrjHysCyPSvjt0uSy6", "marta",      "f","0"], # <-- woman 1
   ["pl-PL", "zzBTsLBFM6AOJtkr1e9b", "pawel pro",  "m","1"], # <----- man 2
-  ["pl-PL", "aAY9hMI6VU335JUszdRs", "alexandra",  "f","1"], # <----- femail 2
+  ["pl-PL", "aAY9hMI6VU335JUszdRs", "alexandra",  "f","1"], # <----- female 2
   
   ["fr-FR","or4EV8aZq78KWcXw48wd", "rachel_fr","f","0" ],
   ["es-ES","6wMKsI8ig8FZUfpyZDIY", "nadia_es","f","0" ],

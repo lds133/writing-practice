@@ -1,0 +1,107 @@
+{
+  "title": "CZAS NA CZASOWNIK 7",
+  "language": "pl-PL",
+  "notes": "Dobra wróżka",
+  "tags": [
+    "A2","CZAS NA CZASOWNIK"
+  ],
+   "data": [
+   {
+       "voice":"f0",
+       "text": "- Marku, ty nigdyjuż nie będziesz decydować o własnym losie!"
+    },
+    {
+		"voice":"m1",
+      "text": "- A kto będzie to robić?"
+    },
+    {
+		"voice":"f0",
+      "text": "- Ja! Dlatego będziesz musiał dużo pracować i mało odpoczywać."
+    },
+    {
+		"voice":"f0",
+      "text": "Dlatego nie będziesz mieć satysfakcji z tego, co będziesz robić."
+    },
+    {
+		"voice":"f0",
+      "text": "W tym czasie twoi koledzy będą szybko awansować."
+    },
+    {
+		"voice":"f0",
+      "text": "Będąjeździli dobrymi samochodami i żenili się z pięknymi kobietami."
+    },
+    {
+		"voice":"f0",
+      "text": "Oni będą bogaci i szczęśliwi. Ty nie!"
+    },
+    {
+		"voice":"m1",
+      "text": "- A czy przynajmniej nie będę mieć kłopotów finansowych?"
+    },
+    {
+		"voice":"f0",
+      "text": "- Będziesz, będziesz! Całe życie będziesz siedzieć w kieszeni u innych."
+    },
+    {
+		"voice":"f0",
+      "text": "Będziesz brać kredyty i pożyczki, które potem latami będziesz spłacać."
+    },
+    {
+		"voice":"m1",
+      "text": "- To niesprawiedliwe! Będę z tobą walczył!"
+    },
+
+    {
+		"voice":"f0",
+      "text": "- I będziesz przegrywał!"
+    },
+    {
+		"voice":"f0",
+      "text": "Będzie cię prześladował pech."
+    },
+    {
+		"voice":"f0",
+      "text": "Nigdzie nie będziesz mógł zdążyć."
+    },
+    {
+		"voice":"f0",
+      "text": "Ani niczego zrealizować."
+    },
+    {
+		"voice":"m1",
+      "text": "- Czy nic dobrego nie będzie mnie spotykać?"
+    },
+    {
+		"voice":"f0",
+      "text": "- Będziesz mieć piękne marzenia."
+    },
+    {
+		"voice":"f0",
+      "text": "Będziesz śnić o sukcesach, zaszczytach i popularności."
+    },
+    {
+		"voice":"f0",
+      "text": "Będziesz pragnąć władzy i bogactwa."
+    },
+    {
+		"voice":"f0",
+      "text": "I niczego nie będziesz mógł urzeczywistnić."
+    },
+    {
+		"voice":"f0",
+      "text": "Ja osobiście będę pilnowała tego wszystkiego."
+    },
+    {
+		"voice":"f0",
+      "text": "I tylko ty jeden nigdy nie będziesz mógł powiedzieć o mnie, że jestem dobrą wróżką."
+    },
+    {
+		"voice":"f0",
+      "text": "A wiesz dlaczego?"
+    },
+    {
+		"voice":"f0",
+      "text": "Bo ja cię, Marku, po prostu nie lubię!!!"
+    }
+  ]
+}

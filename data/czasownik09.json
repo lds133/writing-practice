@@ -1,0 +1,156 @@
+{
+  "title": "CZAS NA CZASOWNIK 9",
+  "language": "pl-PL",
+  "notes": "Zróbmy to!",
+  "tags": [
+    "A2","CZAS NA CZASOWNIK"
+  ],
+   "data": [
+  {
+	   "voice":"m0",
+      "text": "-Jolu, nie czytaj już tych książek!"
+    },
+    {
+		"voice":"f1",
+      "text": "- Daj mi spokój! Przecież muszę."
+    },
+    {
+		"voice":"m0",
+      "text": "-Wcale nie. Lepiej chodźmy gdzieś!"
+    },
+    {
+		"voice":"m0",
+      "text": "Zróbmy coś sympatycznego!"
+    },
+    {
+		"voice":"m0",
+      "text": "Poddajmy się nastrojowi chwili!"
+    },
+    {
+		"voice":"f1",
+      "text": "-Jakiemu nastrojowi? Zwariowałeś?"
+    },
+
+    {
+		"voice":"f1",
+      "text": "Włącz sobie telewizor!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Proszę Cię! Miejmy wreszcie trochę czasu dla siebie!"
+    },
+    {
+		"voice":"f1",
+      "text": "- Nie proś o nic, kiedy się uczę!"
+    },
+    {
+		"voice":"f1",
+      "text": "Nie marnuj mojego zapału!"
+    },
+    {
+		"voice":"f1",
+      "text": "A najlepiej, zaparz kawę!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Taak! Zaparz kawę! Idź po zakupy! Sprzątnij mieszkanie!"
+    },
+    {
+		"voice":"m0",
+      "text": "Ugotuj coś na obiad!"
+    },
+    {
+		"voice":"m0",
+      "text": "Tylko to od ciebie słyszę, odkąd zaczęłaś studiować."
+    },
+    {
+		"voice":"f1",
+      "text": "- Nie przesadzaj, Darku!"
+    },
+    {
+		"voice":"f1",
+      "text": "I zajmij się czymś ciekawym!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Proszę, nie mów do mnie jak do małego dziecka!"
+    },
+    {
+		"voice":"f1",
+      "text": "- A ja proszę - nie pal tutaj!"
+    },
+    {
+		"voice":"f1",
+      "text": "I nie podnoś na mnie głosu!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Przepraszam! Nie złość się!"
+    },
+    {
+		"voice":"m0",
+      "text": "Jestem trochę rozdrażniony."
+    },
+    {
+		"voice":"f1",
+      "text": "- Może weź psa i idźcie na spacer!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Psa? Ja sam czuję się jak pies!"
+    },
+
+    {
+		"voice":"f1",
+      "text": "- Przestań! Rób sobie, co chcesz, ale mi nie przeszkadzaj!"
+    },
+
+    {
+		"voice":"m0",
+      "text": "- Ale jest już prawie noc."
+    },
+    {
+		"voice":"f1",
+      "text": "- Niech będzie!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Połóżmy się spać!"
+    },
+    {
+		"voice":"f1",
+      "text": "-Kładź się sam!"
+    },
+    {
+		"voice":"m0",
+      "text": "- Sam? O nie! Mam żonę."
+    },
+
+    {
+		"voice":"f1",
+      "text": "- Bój się Boga, Darku! Powiedz, o co ci chodzi!"
+    },
+
+    {
+		"voice":"m0",
+      "text": "-Domyśl się!"
+    },
+    {
+		"voice":"f1",
+      "text": "-Poczekaj chwilę! Już kończę."
+    },
+    {
+		"voice":"m0",
+      "text": "- Czy mogę włączyć muzykę?"
+    },
+    {
+		"voice":"f1",
+      "text": "- Zrób to!"
+    },
+    {
+		"voice":"m0",
+      "text": "Nie, lepiej zróbmy to razem!"
+    }	
+
+  ]
+}
