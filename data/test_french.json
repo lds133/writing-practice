@@ -1,0 +1,15 @@
+{
+  "title": "Exemple",
+  "language": "fr-FR",
+  "notes": "Jeu de test en français",
+  "tags": ["test"],
+  "data": [
+    {
+      "text": "La pratique améliore l’écriture !",
+      "notes": "Tapez ce que vous entendez."
+    },
+    {
+      "text": "Plus de pratique, meilleur résultat."
+    }
+  ]
+}
