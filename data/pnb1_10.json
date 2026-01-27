@@ -1,0 +1,31 @@
+{
+  "title": "Pozdrowienia",
+  "language": "pl-PL",
+  "notes": "Spędza Pani urlop na Krecie. Proszę napisać tekst na pocztówkę z pozdrowieniami do koleżanki.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+  "voice":"f0",
+   "data": [
+    {
+
+      "text": "Cześć, Kasiu!"
+    },
+    {
+
+      "text": "Przesyłam Ci serdeczne pozdrowienia z Krety."
+    },
+    {
+
+      "text": "Wyspa jest piękna, zakochałam się w niej!"
+    },
+    {
+
+      "text": "Codziennie zwiedzamy i chodzimy na plażę."
+    },
+    {
+
+      "text": "Uściski Ania"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "title": "Gratulacje",
+  "language": "pl-PL",
+  "notes": "Pana koleżanka cudzoziemka zdała egzamin certyfikatowy z języka polskiego jako obcego. Proszę napisać do niej mail z gratulacjami.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+   "data": [
+     {
+      "text": "Droga Eleno!"
+    },
+    {
+      "text": "Chciałbym Ci serdecznie pogratulować zdania egzaminu z języka polskiego jako obcego."
+    },
+    {
+      "text": "Wiem, jakie to było dla Ciebie ważne."
+    },
+    {
+      "text": "Tak pilnie się uczyłaś!"
+    },
+    {
+      "text": "Bardzo się cieszę, że zdałaś."
+    },
+    {
+      "text": "Trzymałem za Ciebie kciuki!"
+    },
+    {
+      "text": "Pozdrawiam Emil"
+    }
+  ]
+}
