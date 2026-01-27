@@ -8,11 +8,14 @@ VOICE_DIR = "../voice"
 
 VOICE = [
   ["pl-PL", "P9yx385KN0FOmLll8Lkx", "Michał K",   "m","0"],#<-- man 1 low 
-  ["pl-PL", "V5GZ9rfeV9jjKZE5NkT7", "adam",       "m","2"], # <-- male
-  ["pl-PL", "eJLcDj3fKW65V8WhDqPI", "null",       "m","3"],# <-   male 
-  ["pl-PL", "lehrjHysCyPSvjt0uSy6", "marta",      "f","0"], # <-- woman 1
+  ["pl-PL", "S1JKkpuAQNsowB8ZvKRO", "damian",       "m","2"], # <-- male
+  ["pl-PL", "alFofuDn3cOwyoz1i44T", "dallin",       "m","3"],# <-   male 
   ["pl-PL", "zzBTsLBFM6AOJtkr1e9b", "pawel pro",  "m","1"], # <----- man 2
-  ["pl-PL", "aAY9hMI6VU335JUszdRs", "alexandra",  "f","1"], # <----- female 2
+
+  ["pl-PL", "lehrjHysCyPSvjt0uSy6", "marta",      "f","2"], # <-- woman 1
+  ["pl-PL", "aAY9hMI6VU335JUszdRs", "alexandra",  "f","3"], # <----- female 2
+  ["pl-PL", "Z3R5wn05IrDiVCyEkUrK", "arabella",  "f","1"], # <----- female 3
+  ["pl-PL", "RILOU7YmBhvwJGDGjNmP", "jane",  "f","0"], # <----- female 4
   
   ["fr-FR","or4EV8aZq78KWcXw48wd", "rachel_fr","f","0" ],
   ["es-ES","6wMKsI8ig8FZUfpyZDIY", "nadia_es","f","0" ],
@@ -45,6 +48,9 @@ def find_voice(language:str,voicetype:str):
 
 
 def convert(sentence: str, filename: str,language:str,voicetype:str=None)->bool:
+    
+    #print(">>>",sentence, filename,language,voicetype)
+    #exit(0)
     
     if voicetype==None:
         voicetype = VOICE_DEFAULT;
