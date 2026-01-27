@@ -1,0 +1,31 @@
+{
+  "title": "Przeprosiny",
+  "language": "pl-PL",
+  "notes": "Proszę napisać SMS do kolegi/koleżanki z przeprosinami za to, że spóźni się Pani na spotkanie.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+   "voice":"f1",
+   "data": [
+     {
+
+      "text": "Hej, Marku!"
+    },
+    {
+
+      "text": "Bardzo Cię przepraszam, ale spóźnię się pół godziny na nasze spotkanie."
+    },
+    {
+
+      "text": "Najpierw mój autobus przyjechał piętnaście minut później, a teraz stoję w korku."
+    },
+    {
+
+      "text": "Niedługo będę."
+    },
+    {
+
+      "text": "Do zobaczenia! Aneta."
+    }
+  ]
+}

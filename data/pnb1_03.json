@@ -1,0 +1,89 @@
+{
+  "title": "Dialog z egzaminatorem 1",
+  "language": "pl-PL",
+  "notes": "Pani koleżanka ma jutro egzamin na prawo jazdy i bardzo się denerwuje. Proszę udzielić jej rad, co może zrobić, żeby zmniejszyć stres.",
+  "tags": [
+    "B1", "dialog","pnb1","mówienie"
+  ],
+   "data": [
+  {
+	  "voice":"f0",	
+      "text": "– Cześć, Olu! Co u ciebie?"
+    },
+    {
+		"voice":"f1",
+      "text": "– Cześć, Patrycjo! Jutro mam egzamin na prawo jazdy."
+    },
+
+    {
+		"voice":"f0",
+      "text": "– Aha.Teoretyczny czy praktyczny?"
+    },
+    {
+		"voice":"f1",
+      "text": "– Praktyczny.Teorię już zdałam."
+    },
+
+    {
+		"voice":"f0",
+      "text": "– To świetnie! Gratuluję."
+    },
+
+    {
+		"voice":"f0",
+      "text": "Z praktycznym też na pewno sobie poradzisz."
+    },
+    {
+		"voice":"f1",
+      "text": "– Nie wiem… Bardzo się denerwuję!"
+    },
+    {
+		"voice":"f0",
+      "text": "– Nie bój się, jestem pewna, że zdasz."
+    },
+    {
+		"voice":"f0",
+      "text": "Instruktor mówił ci, że dobrze jeździsz."
+    },
+    {
+		"voice":"f1",
+      "text": "– Wiem, ale i tak się boję."
+    },
+    {
+		"voice":"f0",
+      "text": "– Powinnaś zmienić nastawienie."
+    },
+    {
+		"voice":"f0",
+      "text": "Zobacz, wielu ludzi zdaje ten egzamin po kilka razy."
+    },
+    {
+		"voice":"f0",
+      "text": "Pomyśl, że zawsze możesz spróbować jeszcze raz."
+    },
+    {
+		"voice":"f0",
+      "text": "Postaraj się myśleć pozytywnie."
+    },
+    {
+		"voice":"f0",
+      "text": "A jutro rano zjedz coś lekkiego, wypij kawę lub herbatę i wyjdź z domu wcześniej, żeby się nie spóźnić."
+    },
+    {
+		"voice":"f0",
+      "text": "Po drodze możesz posłuchać relaksującej muzyki albo poczytać książkę."
+    },
+    {
+		"voice":"f1",
+      "text": "– Dzięki za rady!"
+    },
+    {
+		"voice":"f0",
+      "text": "– Nie ma sprawy."
+    },
+    {
+		"voice":"f0",
+      "text": "I oczywiście pamiętaj, żeby się wyspać!"
+    }
+  ]
+}

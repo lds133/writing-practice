@@ -1,0 +1,25 @@
+{
+  "title": "Podziękowania",
+  "language": "pl-PL",
+  "notes": "Pracuje Pan w dyrekcji Fundacji „Pomoc Uchodźcom”. Proszę napisać mail do wolontariuszy z podziękowaniem za pomoc uchodźcom.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+   "data": [
+    {
+      "text": "Drodzy Wolontariusze!"
+    },
+    {
+      "text": "Chcemy Wam serdecznie podziękować za pomoc uchodźcom, którzy przyjechali do naszego miasta w zeszłym tygodniu."
+    },
+    {
+      "text": "Dzięki Waszemu zaangażowaniu ci ludzie poczuli się w Polsce lepiej i pewniej."
+    },
+    {
+      "text": "Z całego serca Wam dziękujemy!"
+    },
+    {
+      "text": "Z poważaniem Dyrekcja Fundacji „Pomoc Uchodźcom”"
+    }
+  ]
+}

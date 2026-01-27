@@ -1,0 +1,25 @@
+{
+  "title": "Ogłoszenie",
+  "language": "pl-PL",
+  "notes": "Chce Pan sprzedać mieszkanie. Proszę napisać ogłoszenie na portalu internetowym, w którym przedstawi Pani/Pan szczegóły oferty (lokalizacja, metraż, piętro, liczba pokoi, cena).",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+   "data": [
+     {
+      "text": "Sprzedam trzypokojowe mieszkanie przy ulicy Żelaznej 8 w centrum Olsztyna."
+    },
+    {
+      "text": "Mieszkanie ma 72 metrów kwadratowych, znajduje się na trzecim piętrze w czteropiętrowym bloku bez windy."
+    },
+    {
+      "text": "Jest po generalnym remoncie."
+    },
+    {
+      "text": "Cena: 700 tysięcy złotych (do negocjacji)."
+    },
+    {
+      "text": "Zapraszam do kontaktu: telefon  (Piotr)."
+    }
+  ]
+}

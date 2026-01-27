@@ -1,0 +1,27 @@
+{
+  "title": "Zaproszenie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail, w którym zaprosi Pani koleżanki i kolegów z kursu języka hiszpańskiego na swoje urodziny. Organizuje je Pani w restauracji.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+  "voice":"f1",
+   "data": [
+    {
+
+      "text": "Cześć!"
+    },
+    {
+
+      "text": "Chciałabym zaprosić Was na swoje urodziny, które organizuję 25 listopada o 19:00 w hiszpańskiej restauracji Amor przy ulicy Brzechwy 11."
+    },
+    {
+
+      "text": "Proszę, napiszcie, czy będziecie mogli przyjść."
+    },
+    {
+
+      "text": "Do zobaczenia! Natalia"
+    }
+  ]
+}

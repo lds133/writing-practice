@@ -1,0 +1,31 @@
+{
+  "title": "Życzenia",
+  "language": "pl-PL",
+  "notes": "Jest Pan szefem firmy. Proszę napisać mail do pracowników z życzeniami bożonarodzeniowymi i noworocznymi.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+   "voice":"m0",
+   "data": [
+     {
+
+      "text": "Szanowni Państwo!"
+    },
+    {
+
+      "text": "W imieniu Dyrekcji chciałbym złożyć Państwu najserdeczniejsze życzenia z okazji świąt Bożego Narodzenia."
+    },
+    {
+
+      "text": "Niech ten czas będzie dla Państwa okazją do odpoczynku w gronie najbliższych!"
+    },
+    {
+
+      "text": "Życzymy Państwu także Szczęśliwego Nowego Roku, pełnego sukcesów i radosnych chwil."
+    },
+    {
+
+      "text": "Piotr Jagielski"
+    }
+  ]
+}

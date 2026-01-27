@@ -1,0 +1,41 @@
+{
+  "title": "Charakterystyka osoby",
+  "language": "pl-PL",
+  "notes": "„Moja najlepsza przyjaciółka” – proszę napisać charakterystykę i uzasadnić, dlaczego uważa Pani/Pan tę osobę za swojego najlepszego przyjaciela lub swoją najlepszą przyjaciółkę.",
+  "tags": [
+    "B1", "pnb1","pisanie"
+  ],
+   "voice":"f3",
+   "data": [
+   {
+      "text": "Gdy ma czas, spotyka się z przyjaciółmi."
+    },
+    {
+      "text": "Z Agatą można porozmawiać na każdy temat."
+    },
+    {
+      "text": "Wiem, że mogę jej wszystko powiedzieć."
+    },
+    {
+      "text": "Zawsze mnie wysłucha, czasami coś doradzi, a przede wszystkim uczciwie spojrzy na sytuację."
+    },
+    {
+      "text": "Za to właśnie ją cenię."
+    },
+    {
+      "text": "Zawsze mogę na niej polegać."
+    },
+    {
+      "text": "Kiedy miałam problemy w szkole, bo moi rodzice się rozwodzili, Agata była przy mnie."
+    },
+    {
+      "text": "Pomagała mi w lekcjach i była obok."
+    },
+    {
+      "text": "Do dziś wiem, że pomoże mi w każdej trudnej sytuacji."
+    },
+    {
+      "text": "Z tych powodów uważam ją za swoją najlepszą przyjaciółkę."
+    }
+  ]
+}

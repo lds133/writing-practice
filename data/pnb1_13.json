@@ -1,0 +1,31 @@
+{
+  "title": "Zawiadomienie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać zawiadomienie o zebraniu dla lokatorów osiedla segmentów w sprawie opłat na utrzymanie otoczenia.",
+  "tags": [
+    "B1", "small","pnb1", "pisanie"
+  ],
+  "voice":"f1",
+   "data": [
+     {
+
+      "text": "Drodzy Państwo!"
+    },
+    {
+
+      "text": "Informujemy o zebraniu lokatorów naszego osiedla, które odbędzie się w sobotę o godzinie 14:00 na dziedzińcu głównym"
+    },
+    {
+
+      "text": "Na zebraniu będziemy zbierać pieniądze na utrzymanie otoczenia."
+    },
+    {
+
+      "text": "Obecność obowiązkowa."
+    },
+    {
+
+      "text": "Zarząd"
+    }
+  ]
+}

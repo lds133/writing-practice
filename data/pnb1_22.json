@@ -1,0 +1,69 @@
+{
+  "title": "Opowiadanie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać opowiadanie pod tytułem: „Spotkanie w pociągu”.",
+  "tags": [
+    "B1", "pnb1","pisanie"
+  ],
+   "voice":"f2",
+   "data": [
+  {
+
+      "text": "Był pochmurny, deszczowy dzień."
+    },
+    { 
+      "text": "Diana stała na peronie dworca w Gdańsku i czekała na pociąg, który się spóźniał."
+    },
+    { 
+      "text": "Miał przyjechać o siedemnastej, a była już siedemnasta trzydzieści i pociąg nie przyjeżdżał."
+    },
+    { 
+      "text": "W poczekalni Diana zobaczyła przystojnego chłopaka."
+    },
+    { 
+      "text": "Od razu jej się spodobał."
+    },
+    {  
+      "text": "Miał czarne włosy i niebieskie oczy."
+    },
+    { 
+      "text": "Spojrzeli na siebie i Diana się zawstydziła, ale po chwili chłopak zgubił się w tłumie."
+    },
+    {  
+      "text": "Kiedy pociąg wreszcie przyjechał, dziewczyna wsiadła do wagonu."
+    },
+    {  
+      "text": "Gdy znalazła swój przedział, okazało się, że w środku siedzą już trzy kobiety."
+    },
+    {  
+      "text": "Diana podniosła walizkę, żeby położyć ją na półce, i wtedy poczuła czyjąś dłoń."
+    },
+    {  
+      "text": "„Pomóc ci?” – zapytał ktoś ciepłym głosem i się uśmiechnął."
+    },
+    {  
+      "text": "Diana odwróciła się. To był on! Chłopak z poczekalni."
+    },
+    {  
+      "text": "Miał miejsce w tym samym przedziale co ona, i to naprzeciwko niej!"
+    },
+    {  
+      "text": "Od razu zaczęli ze sobą rozmawiać."
+    },
+    {  
+      "text": "Robert – bo tak miał na imię – jechał w odwiedziny do rodziców."
+    },
+    {  
+      "text": "Rozmawiał z Dianą o wszystkim: o pracy, o zainteresowaniach, o życiu."
+    },
+    {  
+      "text": "Podróż minęła Dianie bardzo szybko."
+    },
+    {  
+      "text": "Gdy miała już wysiadać, Robert poprosił ją o numer telefonu i zaproponował spotkanie."
+    },
+    {  
+      "text": "Była zachwycona!"
+    }
+  ]
+}

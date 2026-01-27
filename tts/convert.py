@@ -32,6 +32,9 @@ for file_name in os.listdir(DATA_DIR):
         content = json.load(f)
 
     language = content.get("language","en-US")
+    
+    defaultvoicetype = content.get("voice",None)
+
 
     for idx, item in enumerate(content.get("data", [])):
         text = item.get("text")
@@ -46,14 +49,12 @@ for file_name in os.listdir(DATA_DIR):
         if os.path.isfile(output_filename):
             print("Skip: "+ output_filename)
             continue
-        
-           
 
         tmp_filename = "tmp_voice.wav"
         if os.path.isfile(tmp_filename):
             os.remove(tmp_filename) 
             
-        if not convert(text, tmp_filename,language,voicetype):
+        if not convert(text, tmp_filename,language,voicetype if voicetype!=None else defaultvoicetype ):
             continue
         
         # Add half a second of silence at the end, then convert to OGG.
