@@ -71,7 +71,7 @@ $(function () {
 
 
 
-  // Load JSON
+  // JSON
   fetch(dataUrl)
     .then(res => {
       if (!res.ok) throw new Error("Failed to load JSON");
@@ -89,17 +89,20 @@ $(function () {
     });
 
 	
+	
+	
 	function cleanString(input) {
-	  return input.replace(/[^\p{L}^\d]+/gu, ' ').replace(/\s+/g, ' ').trim();
+		return input.replace(/[^\p{L}^\d]+/gu, ' ').replace(/\s+/g, ' ').trim();
 	}
 
-  async function init() {
+    async function init() {
 	  
-	DB_open();  
-	  
-    $("#totalCount").text(setData.data.length);
-    renderPhrase();
-  }
+		DB_open();  
+		  
+		$("#totalCount").text(setData.data.length);
+		renderPhrase();
+    
+	}
 
   function renderPhrase() {
 	  
@@ -170,65 +173,69 @@ $(function () {
 		});
 
 
-  // Typing handler
-  $inputBox.on("input", function (e) {
-    const phrase = cleanString( setData.data[currentIndex].text );
-    var value = $(this).val();
 	
-	// remove punctuation and multiple spaces
-	value = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ").replace(/\s+/g, ' ');
 
-    // Detect backspace
-    if (value.length < lastValue.length) {
-      playSound(sounds.backspace);
-    }
+    // Typing 
+	$inputBox.on("input", function (e) 
+	{
+		const phrase = cleanString( setData.data[currentIndex].text );
+		var value = $(this).val();
 
-    // Detect added character
-    if (value.length > lastValue.length) {
-      const i = value.length - 1;
-      const typedChar = value[i];
-      const expectedChar = phrase[i];
+		// remove punctuation and multiple spaces
+		value = value.replace(/[.,/#!$%^&*;:{}=\-_`~()?"'[\]\\|<>]/g, " ").replace(/\s+/g, ' ');
 
-      if (typedChar === " ") {
-        playSound(sounds.space);
-      } else if (typedChar.toLowerCase() === expectedChar?.toLowerCase()) {
-        playSound(sounds.ok);
-		stats.event_ok();
-      } else {
-        playSound(sounds.error);
-		stats.event_error();
-      }
+		const itwasok = (lastValue.length==0) || (phrase.toLowerCase().startsWith(lastValue));
+
+		// Detect backspace
+		if (value.length < lastValue.length) 
+			playSound(sounds.backspace);
+		
+		// Detect added character
+		if (value.length > lastValue.length) 
+		{
+			const i = value.length - 1;
+			const typedChar = value[i];
+			const expectedChar = phrase[i];
+
+			if (typedChar === " ") 
+			{	playSound(sounds.space);
+			} else if (typedChar.toLowerCase() === expectedChar?.toLowerCase()) 
+			{	playSound(sounds.ok);
+				stats.event_ok();
+			} else 
+			{	playSound(sounds.error);
+				if (itwasok)
+					stats.event_error();
+			}
+
+			$("#statPlace1").html(stats.total.ok.toString());
+			$("#statPlace2").html(stats.total.count_mistakes().toString());
+			$("#statPlace3").html(stats.total.persent_accuracy().toString()+"%");
 	  
-	  $("#statPlace1").html(stats.total.ok.toString());
-	  $("#statPlace2").html(stats.total.count_mistakes().toString());
-	  $("#statPlace3").html(stats.total.persent_accuracy().toString()+"%");
-	  
-    }
+		}
 
-    // Update placeholders
-    $placeholders.children().each(function (i) {
-      const $el = $(this);
-      $el.removeClass("correct hint");
-      $el.text(phrase[i] === " " ? " " : "");
+		// Update placeholders
+		$placeholders.children().each(function (i) 
+		{
+			const $el = $(this);
+			$el.removeClass("correct hint");
+			$el.text(phrase[i] === " " ? " " : "");
 
-      if (value[i] && value[i].toLowerCase() === phrase[i].toLowerCase()) {
-        $el.text(phrase[i]).addClass("correct");
-      }
-    });
+			if (value[i] && value[i].toLowerCase() === phrase[i].toLowerCase()) 
+				$el.text(phrase[i]).addClass("correct");
+		});
 
-	let fixedvalue = value;
-	
-    // Success check
-    if (
-      value.length === phrase.length &&
-      fixedvalue.toLowerCase() === phrase.toLowerCase()
-    ) {
-      playSound(sounds.success);
-	  phraseCompleted = true;
-	  save_stat();
-    }
+		let fixedvalue = value;
 
-    lastValue = value;
+		// Success check
+		if (value.length === phrase.length && fixedvalue.toLowerCase() === phrase.toLowerCase()) 
+		{	playSound(sounds.success);
+			phraseCompleted = true;
+			save_stat();
+		}
+
+		lastValue = value;
+  
   });
 
 
