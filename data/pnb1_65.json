@@ -1,0 +1,29 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Organizuje Pan spacer po Warszawie dla studentów Erasmusa. Niestety popsuła się pogoda. Proszę napisać mail do studentów z propozycją nowego terminu. (30 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+    {
+      "text": "Cześć."
+    },
+    {
+      "text": "Niestety z powodu złej pogody musimy przełożyć spacer po Warszawie."
+    },
+    {
+      "text": "Proponuję nowy termin w najbliższą sobotę o godzinie 11."
+    },
+    {
+      "text": "Mam nadzieję, że wszystkim pasuje."
+    },
+    {
+      "text": "Proszę o potwierdzenie."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Jan."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Znalazł Pan w internecie ogłoszenie o wynajmie apartamentu wakacyjnego na Mazurach: Wynajmę apartament z ogrodem na Mazurach dla czterech osób, tuż obok jeziora Śniardwy. Apartament ma dwie osobne sypialnie, kuchnię i łazienkę. Proszę odpowiedzieć na to ogłoszenie, zapytać o cenę, wolne terminy i warunki rezerwacji. (40 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+     {
+      "text": "Szanowni Państwo."
+    },
+    {
+      "text": "Znalazłem ogłoszenie dotyczące wynajmu apartamentu nad jeziorem Śniardwy na Mazurach i jestem bardzo zainteresowany."
+    },
+    {
+      "text": "Chciałbym zapytać o cenę za tydzień pobytu w lipcu, dostępne terminy oraz warunki rezerwacji."
+    },
+    {
+      "text": "Proszę o odpowiedź."
+    },
+    {
+      "text": "Z poważaniem, Jan Kowalski."
+    }
+  
+  ]
+}

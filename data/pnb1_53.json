@@ -1,0 +1,27 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail do swojej nauczycielki języka polskiego z zaproszeniem na spotkanie pożegnalne przed Pani/Pana wyjazdem z Polski. Proszę podać szczegóły spotkania (miejsce, termin, godzinę i lokalizację). (40 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"f0",
+   "data": [
+   {
+       "text": "Zaproszenie na spotkanie pożegnalne."
+    },
+    {
+      "text": "Szanowna Pani Profesor, serdecznie zapraszam Panią na spotkanie pożegnalne przed moim wyjazdem z Polski."
+    },
+    {
+      "text": "Odbędzie się ono 25 lutego o godzinie 18 w kawiarni „Słoneczna” przy ulicy Lipowej 10 w Krakowie."
+    },
+    {
+      "text": "Będzie mi bardzo miło, jeśli Pani przyjdzie."
+    },
+    {
+      "text": "Z wyrazami szacunku, Anna."
+    }
+  
+  ]
+}

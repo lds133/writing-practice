@@ -1,0 +1,27 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Znalazł Pan ogłoszenie z ofertą pracy w sklepie odzieżowym. Proszę odpowiedzieć na ogłoszenie i zapytać o szczegóły (lokalizację sklepu, godziny pracy i wysokość pensji). (40 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+    {
+      "text": "Szanowni Państwo."
+    },
+    {
+      "text": "Znalazłem ogłoszenie dotyczące pracy w sklepie odzieżowym i jestem zainteresowany tą ofertą."
+    },
+    {
+      "text": "Mam doświadczenie w obsłudze klienta i szybko się uczę."
+    },
+    {
+      "text": "Czy mogliby Państwo podać dokładną lokalizację sklepu, godziny pracy oraz wysokość pensji?"
+    },
+    {
+      "text": "Z poważaniem, Jan Kowalski."
+    }
+  
+  ]
+}

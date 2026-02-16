@@ -1,0 +1,26 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Chce Pan kupić mieszkanie. Proszę napisać ogłoszenie na portalu internetowym, w którym przedstawi Pani/Pan swoje oczekiwania (lokalizacja, metraż, piętro, liczba pokoi, cena). (50 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m1",
+   "data": [
+    {
+      "text": "Szukam mieszkania do kupienia w centrum miasta lub w spokojnej dzielnicy z dobrym dojazdem do pracy."
+    },
+    {
+      "text": "Interesuje mnie lokal o metrażu 50 metrów kwadratowych, na drugim lub trzecim piętrze."
+    },
+    {
+      "text": "Preferuję trzy pokoje i balkon."
+    },
+    {
+      "text": "Maksymalna cena to 600 tysięcy złotych."
+    },
+    {
+      "text": "Proszę o kontakt mailowy."
+    }
+  ]
+}

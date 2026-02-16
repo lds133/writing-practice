@@ -1,0 +1,33 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Znalazł Pan w internecie ogłoszenie o sprzedaży roweru: Sprzedam rower miejski kupiony w 2019 roku. Rower był mało używany i jest w bardzo dobrym stanie. Cena: 500 zł (do negocjacji).Proszę odpowiedzieć na to ogłoszenie, zapytać o markę roweru oraz możliwość obniżenia ceny i obejrzenia roweru. (35 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m2",
+   "data": [
+    {
+      "text": "Odpowiedź na ogłoszenie o sprzedaży roweru."
+    },
+    {
+      "text": "Dzień dobry, jestem zainteresowany zakupem roweru z ogłoszenia."
+    },
+    {
+      "text": "Czy może Pan podać markę roweru?"
+    },
+    {
+      "text": "Czy istnieje możliwość obniżenia ceny?"
+    },
+    {
+      "text": "Chciałbym również obejrzeć rower osobiście."
+    },
+    {
+      "text": "Proszę o informację, kiedy byłoby to możliwe."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Michał."
+    }
+  
+  ]
+}

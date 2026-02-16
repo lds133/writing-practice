@@ -1,0 +1,26 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Pracuje Pan w ambasadzie swojego kraju na terenie Polski. Proszę napisać zaproszenie do pracowników innych ambasad na przyjęcie z okazji święta narodowego swojego kraju. (30 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+    {
+      "text": "Zaproszenie na przyjęcie z okazji święta narodowego."
+    },
+    {
+      "text": "Szanowni Państwo."
+    },
+    {
+      "text": "Serdecznie zapraszam na przyjęcie z okazji święta narodowego naszego kraju, które odbędzie się 5 marca o godzinie 18 w siedzibie ambasady."
+    },
+    {
+      "text": "Będzie nam miło Państwa gościć."
+    },
+    {
+      "text": "Z poważaniem, Jan Kowalski."
+    }
+  ]
+}

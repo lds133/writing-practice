@@ -1,0 +1,26 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail do kolegi z życzeniami z okazji jego urodzin. (25 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m1",
+   "data": [
+    {
+      "text": "Cześć Tomku."
+    },
+    {
+      "text": "z okazji Twoich urodzin życzę Ci dużo zdrowia, szczęścia i sukcesów w pracy oraz życiu prywatnym."
+    },
+    {
+      "text": "Spełnienia marzeń i wspaniałego świętowania w gronie bliskich!"
+    },
+    {
+      "text": "Sto lat!"
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Michał."
+    }
+  ]
+}
