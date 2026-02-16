@@ -1,0 +1,30 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Nocuje Pan w hotelu, który polecił Pani/Panu klient Pańskiej firmy. Proszę napisać do niego mail z podziękowaniem. (25 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m1",
+   "data": [
+    {
+      "text": "Podziękowanie za polecenie hotelu."
+    },
+    {
+      "text": "Szanowny Panie, serdecznie dziękuję za polecenie hotelu."
+    },
+    {
+      "text": "Jestem bardzo zadowolony z pobytu obsługa jest miła, a warunki komfortowe."
+    },
+    {
+      "text": "To był świetny wybór."
+    },
+    {
+      "text": "Jeszcze raz dziękuję za rekomendację."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Tomasz."
+    }
+  
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail do uczniów szkoły językowej, którzy rozpoczynają kurs języka polskiego, z informacją o jego szczegółach (data rozpoczęcia i zakończenia, plan zajęć). (40 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"f0",
+   "data": [
+     {
+      "text": "Informacje o kursie języka polskiego."
+    },
+    {
+      "text": "Szanowni Państwo, informuję, że kurs języka polskiego rozpocznie się 1 marca i zakończy 5 czerwca."
+    },
+    {
+      "text": "Zajęcia będą odbywać się dwa razy w tygodniu, w poniedziałki i środy, w godzinach z 1 do 2"
+    },
+    {
+      "text": "Prosimy o punktualność."
+    },
+    {
+      "text": "W razie pytań zapraszamy do kontaktu."
+    },
+    {
+      "text": "Z poważaniem, Anna Kowalska."
+    }
+  
+  ]
+}

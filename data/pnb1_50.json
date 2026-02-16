@@ -1,0 +1,23 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Spędza Pan urlop w Polsce. Proszę napisać SMS do koleżanki  z pozdrowieniami (25 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+     {
+      "text": "Cześć Aniu!"
+    },
+    {
+      "text": "Spędzam wspaniałe wakacje w Polsce"
+    },
+    {
+      "text": "Pogoda jest piękna, zwiedzam ciekawe miejsca i odpoczywam."
+    },
+    {
+      "text": "Serdecznie Cię pozdrawiam!"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Zaginął Panu pies. Proszę napisać ogłoszenie, które powiesi Pani/Pan w pobliżu miejsca zdarzenia. (25 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+     {
+      "text": "Zaginął pies rasy beagle, mały, brązowo-biały, w czerwonej obroży."
+    },
+    {
+      "text": "Zaginął w okolicy parku miejskiego wczoraj wieczorem."
+    },
+    {
+      "text": "Proszę o kontakt pod numerem 2 2 3"
+    },
+    {
+      "text": "Przewidziana nagroda pieniężna."
+    }
+  ]
+}

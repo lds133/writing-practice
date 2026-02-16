@@ -1,0 +1,30 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail do kolegi z przeprosinami za nieobecność na jego urodzinach (30 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+     {
+      "text": "Przeprosiny za urodziny."
+    },
+    {
+      "text": "Jeszcze raz Cześć Marku."
+    },
+    {
+      "text": "bardzo przepraszam za moją nieobecność na Twoich urodzinach."
+    },
+    {
+      "text": "Niestety miałem pilne sprawy rodzinne."
+    },
+    {
+      "text": "Mam nadzieję, że spotkamy się wkrótce i wszystko Ci opowiem."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Jan. "
+    }
+  
+  ]
+}

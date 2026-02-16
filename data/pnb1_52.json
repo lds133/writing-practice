@@ -1,0 +1,27 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Pana znajomy obronił doktorat. Proszę napisać do niego list z gratulacjami (25 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+    {
+      "text": "Drogi Piotrze, serdecznie gratuluję obrony doktoratu."
+    },
+    {
+      "text": "Jestem z Ciebie bardzo dumny i życzę dalszych sukcesów naukowych oraz spełnienia marzeń."
+    },
+    {
+      "text": "Brawo!"
+    },
+    {
+      "text": "To wielkie osiągnięcie zawodowe."
+    },
+    {
+      "text": "Gratulacje."
+    }
+  
+  ]
+}

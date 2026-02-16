@@ -1,0 +1,24 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Jest Pan malarzem. Proszę napisać mail do przyjaciół z zaproszeniem na wystawę swoich obrazów. (30 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m2",
+   "data": [
+    {
+      "text": "Zaproszenie na wystawę moich obrazów."
+    },
+    {
+      "text": "Drodzy Przyjaciele, serdecznie zapraszam Was na wystawę moich obrazów, która odbędzie się 3 marca o godzinie 2 w galerii miejskiej."
+    },
+    {
+      "text": "Będzie mi bardzo miło, jeśli przyjdziecie i wspólnie uczcimy to wydarzenie."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Paweł."
+    }
+  
+  ]
+}

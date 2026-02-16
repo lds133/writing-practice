@@ -1,0 +1,30 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Jest Pan dyrektorem przedszkola. Proszę napisać mail do rodziców z informacją o planowanym remoncie placówki. Proszę podać szczegóły (termin remontu, możliwość posyłania dziecka do innego przedszkola). (35 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+ 
+    {
+      "text": "Informacja o planowanym remoncie przedszkola."
+    },
+    {
+      "text": "Szanowni Państwo, informuję, że w dniach od 1 do 5 kwietnia  planowany jest remont naszego przedszkola."
+    },
+    {
+      "text": "W tym czasie dzieci będą mogły uczęszczać do zaprzyjaźnionej placówki przy ulicy Zielonej 5."
+    },
+    {
+      "text": "Prosimy o wcześniejsze zgłoszenie takiej potrzeby."
+    },
+    {
+      "text": "Dziękujemy za wyrozumiałość."
+    },
+    {
+      "text": "Z poważaniem, Dyrektor."
+    }
+  ]
+}

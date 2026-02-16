@@ -1,0 +1,33 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Pana koleżanka pomogła Panu w przeprowadzce. Proszę napisać mail z podziękowaniem i dodać, jak mieszka się Panu w nowym mieszkaniu. (40 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m0",
+   "data": [
+     {
+      "text": "Podziękowanie za pomoc przy przeprowadzce."
+    },
+    {
+      "text": "Cześć Kasiu."
+    },
+    {
+      "text": "Bardzo dziękuję Ci za pomoc przy przeprowadzce."
+    },
+    {
+      "text": "Bez Ciebie nie poradziłbym sobie tak szybko i sprawnie."
+    },
+    {
+      "text": "Nowe mieszkanie jest jasne i przytulne, a okolica spokojna."
+    },
+    {
+      "text": "Czuję się tu naprawdę dobrze."
+    },
+    {
+      "text": "Jeszcze raz dziękuję i pozdrawiam, Jan."
+    }
+  
+  ]
+}

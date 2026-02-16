@@ -1,0 +1,27 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Proszę napisać mail do współpracowników z podziękowaniem za wspólną pracę nad trudnym projektem i oddanie go na czas. (30 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"m2",
+   "data": [
+     {
+      "text": "Podziękowanie za wspólną pracę nad projektem."
+    },
+    {
+      "text": "Drodzy Współpracownicy, serdecznie dziękuję za zaangażowanie i świetną współpracę przy trudnym projekcie."
+    },
+    {
+      "text": "Dzięki Waszej pracy i profesjonalizmowi udało się oddać go na czas."
+    },
+    {
+      "text": "Jestem z Was bardzo dumny i liczę na kolejne wspólne sukcesy."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Adam."
+    }
+  
+  ]
+}

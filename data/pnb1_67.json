@@ -1,0 +1,36 @@
+{
+  "title": "Teksty krótkie",
+  "language": "pl-PL",
+  "notes": "Jako rodzic współorganizuje Pani/Pan wycieczkę do Gdańska dla klasy swojego syna. Proszę napisać mail do rodziców i poinformować o szczegółach wycieczki (termin wyjazdu i powrotu, środek transportu, nocleg, wyżywienie). (50 słów)",
+  "tags": [
+    "B1", "pnb1", "pisanie", "Short", "ChatGPT", "unverified"
+  ],
+      "voice":"f0",
+   "data": [
+    {
+      "text": "Informacje o wycieczce do Gdańska."
+    },
+    {
+      "text": "Szanowni Państwo."
+    },
+    {
+      "text": "Wspólnie z wychowawcą organizujemy wycieczkę do Gdańska dla naszej klasy."
+    },
+    {
+      "text": "Wyjazd planowany jest 15 maja o godzinie 7, a powrót 17 maja około 18."
+    },
+    {
+      "text": "Jedziemy autokarem."
+    },
+    {
+      "text": "Nocleg będzie w hostelu w centrum miasta."
+    },
+    {
+      "text": "Zapewnione są śniadania i obiadokolacje."
+    },
+    {
+      "text": "Pozdrawiam serdecznie, Anna Nowak."
+    }
+  
+  ]
+}
